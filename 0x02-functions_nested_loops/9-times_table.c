@@ -26,7 +26,7 @@ void _putnumber(int i, int digits, char filler)
 		}
 		else if (dg <= digits)
 		{
-		    _putchar(filler);
+			_putchar(filler);
 		}
 		i = mod;
 		ld = ld / 10;
