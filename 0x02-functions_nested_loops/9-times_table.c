@@ -24,7 +24,7 @@ void _putnumber(int i, int digits, char filler)
 			_putchar(div + '0');
 			flag = 1;
 		}
-		else if (dg <= digits)
+		if (!flag && dg <= digits)
 		{
 		    _putchar(filler);
 		}
