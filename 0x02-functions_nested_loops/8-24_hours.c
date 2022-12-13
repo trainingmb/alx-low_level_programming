@@ -40,9 +40,9 @@ void _putnumber(int i, int digits)
 	{
 		for (min = 0; min < 60; min++)
 		{
-			_putnumber(hr);
+			_putnumber(hr, 2);
 			_putchar(':');
-			_putnumber(min);
+			_putnumber(min, 2);
 			_putchar('\n');
 		}
 	}
