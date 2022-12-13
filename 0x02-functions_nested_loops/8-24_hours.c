@@ -33,15 +33,15 @@ void _putnumber(int i)
  void jack_bauer(void)
  {
 	 int hr = 0, min = 0;
-	 for (hr = 0; hr < 24; hr++)
+	for (hr = 0; hr < 24; hr++)
 	{
-		 _putnumber(hr);
-		 _putchar(':');
-		 for (min = 0; min < 60; min++)
-		 {
+		for (min = 0; min < 60; min++)
+		{
+			_putnumber(hr);
+			_putchar(':');
 			_putnumber(min);
-		 }
-		_putchar('\n');
+			_putchar('\n');
+		}
 	}
  }
  
