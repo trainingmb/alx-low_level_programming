@@ -3,17 +3,19 @@
 
 /**
  * _putnumber - prints number provided
+ * @i: The number to print
  * Return:	No return
  */
 void _putnumber(int i)
 {
 	int ld = 1000000000;
 	char flag = 0;
-	while(ld >= 1)
+
+	while (ld >= 1)
 	{
 		int mod = i % ld;
 		int div = i / ld;
-		
+
 		if (flag || div > 0)
 		{
 			_putchar(div +'0');
@@ -31,14 +33,15 @@ void _putnumber(int i)
  void jack_bauer(void)
  {
 	 int hr = 0, min = 0;
-	 for ( hr = 0; hr < 24; hr++)
-	 {
-		 _putchar('0' + hr);
+	 for (hr = 0; hr < 24; hr++)
+	{
+		 _putnumber(hr);
 		 _putchar(':');
 		 for (min = 0; min < 60; min++)
 		 {
-			 _putchar('0' + min);
+			_putnumber(min);
 		 }
-		 _putchar('\n');
-	 }
+		_putchar('\n');
+	}
  }
+ 
