@@ -20,7 +20,7 @@ void _putnumber(int i, int digits)
 
 		if (flag || dg == digits || div > 0)
 		{
-			_putchar(div +'0');
+			_putchar(div + '0');
 			flag = 1;
 		}
 		i = mod;
@@ -30,11 +30,11 @@ void _putnumber(int i, int digits)
 }
 
 /**
- * jack_bauer - prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
+ * jack_bauer - prints every minute of the day, from 00:00 to 23:59
  * Return:	No return
  */
- void jack_bauer(void)
- {
+void jack_bauer(void)
+{
 	 int hr = 0, min = 0;
 	for (hr = 0; hr < 24; hr++)
 	{
@@ -46,5 +46,4 @@ void _putnumber(int i, int digits)
 			_putchar('\n');
 		}
 	}
- }
- 
+}
