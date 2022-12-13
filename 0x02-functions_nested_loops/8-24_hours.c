@@ -3,26 +3,29 @@
 
 /**
  * _putnumber - prints number provided
- * @i: The number to print
+ * @i:		The number to print
+ * @digits:	Number of digits to print
  * Return:	No return
  */
-void _putnumber(int i)
+void _putnumber(int i, int digits)
 {
 	int ld = 1000000000;
 	char flag = 0;
+	int dg = 10;
 
 	while (ld >= 1)
 	{
 		int mod = i % ld;
 		int div = i / ld;
 
-		if (flag || div > 0)
+		if (flag || dg == digits || div > 0)
 		{
 			_putchar(div +'0');
 			flag = 1;
 		}
 		i = mod;
 		ld = ld / 10;
+		dg--;
 	}
 }
 
