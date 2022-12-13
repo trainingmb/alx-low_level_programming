@@ -46,12 +46,10 @@ void times_table(void)
 	{
 		_putchar('0');
 		_putchar(',');
-		for (j = 0; j < 10; j++)
+		for (j = 1; j < 10; j++)
 		{
 			_putnumber(i * j, 3, ' ');
-			if (j == 9)
-				_putchar('$');
-			else
+			if (j != 9)
 				_putchar(',');
 		}
 		_putchar('\n');
