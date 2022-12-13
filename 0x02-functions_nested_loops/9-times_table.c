@@ -18,10 +18,10 @@ void _putnumber(int i, int digits, char filler)
 	{
 		int mod = i % ld;
 		int div = i / ld;
-        
+
 		if (flag || div > 0 || dg == 1)
 		{
-			_putchar(div +'0');
+			_putchar(div + '0');
 			flag = 1;
 		}
 		else if (dg <= digits)
@@ -40,16 +40,16 @@ void _putnumber(int i, int digits, char filler)
  */
 void times_table(void)
 {
-	int i,j;
-	
+	int i, j;
+
 	for (i = 0; i < 10; i++)
 	{
 		_putchar('0');
 		_putchar(',');
-		for ( j = 0; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
 			_putnumber(i * j, 3, ' ');
-			if ( j == 9 )
+			if (j == 9)
 				_putchar('$');
 			else
 				_putchar(',');
