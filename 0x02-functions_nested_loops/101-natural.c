@@ -35,7 +35,7 @@ void _putnumber(int i, int digits, char filler)
 }
 
 /**
- * main - computes and prints the sum of all the 
+ * main - computes and prints the sum of all the
  *			multiples of 3 or 5 below 1024
  *
  * Return: Always 0.
@@ -46,7 +46,7 @@ int main(void)
 
 	while (n < 1024)
 	{
-		if((n % 3) == 0 || (n % 5) == 0)
+		if ((n % 3) == 0 || (n % 5) == 0)
 		{
 			sum = n + sum;
 		}
@@ -54,5 +54,5 @@ int main(void)
 	}
 	_putnumber(sum, 1, ' ');
 	_putchar('\n');
-    return (0);
+	return (0);
 }
