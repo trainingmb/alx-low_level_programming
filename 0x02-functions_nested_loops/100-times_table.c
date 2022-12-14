@@ -48,12 +48,11 @@ void print_times_table(int n)
 		for (i = 0; i < (n + 1); i++)
 		{
 			_putchar('0');
-			_putchar(',');
+			
 			for (j = 1; j < (n + 1); j++)
 			{
+				_putchar(',');
 				_putnumber(i * j, 4, ' ');
-				if (j != n)
-					_putchar(',');
 			}
 			_putchar('\n');
 		}
