@@ -14,6 +14,11 @@ void _putnumber(int i, int digits, char filler)
 	char flag = 0;
 	int dg = 10;
 
+	if (i < 0)
+	{
+		_putchar('-');
+		i = -i;
+	}
 	while (ld >= 1)
 	{
 		int mod = i % ld;
@@ -59,6 +64,6 @@ void print_to_98(int n)
 			_putchar(' ');
 		}
 	}
-	_putnumber(98, 1, '');
+	_putnumber(98, 1, ' ');
 	_putchar('\n');
 }
