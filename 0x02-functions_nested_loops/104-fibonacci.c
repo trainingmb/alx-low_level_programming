@@ -2,7 +2,7 @@
 
 
 /**
- * printnumber - print vector a
+ * printnumberv - print vector a
  * @a: int vector of length 30
  * Return: No return
  */
@@ -10,7 +10,7 @@ void printnumberv(int a[])
 {
 	int i = 0, flag = 0;
 
-	for( i = 29; i >= 0; i--)
+	for (i = 29; i >= 0; i--)
 	{
 		if (flag || a[i] > 0)
 		{
@@ -20,7 +20,7 @@ void printnumberv(int a[])
 	}
 }
 /**
- * copy - copy vector b to vector a
+ * copyv - copy vector b to vector a
  * @a: int vector of length 30
  * @b: int vector of length 30
  * Return: No return
@@ -29,13 +29,13 @@ void copyv(int a[], int b[])
 {
 	int i = 0;
 
-	for( i = 0; i < 30; i++)
+	for (i = 0; i < 30; i++)
 	{
 		a[i] = b[i];
 	}
 }
 /**
- * add - add vector b to vector a
+ * addv - add vector b to vector a
  * @a: int vector of length 30
  * @b: int vector of length 30
  * Return: No return
@@ -44,7 +44,7 @@ void addv(int a[], int b[])
 {
 	int i = 0, carry = 0, temp = 0;
 
-	for( i = 0; i < 30; i++)
+	for (i = 0; i < 30; i++)
 	{
 		temp = (a[i] + b[i] + carry) % 10;
 		carry = (a[i] + b[i] + carry) / 10;
@@ -73,10 +73,10 @@ int main(void)
 		_putchar(' ');
 		printnumberv(m);
 		c++;
-		copyv(temp,m);
-		addv(m,n);
-		copyv(n,temp);
+		copyv(temp, m);
+		addv(m, n);
+		copyv(n, temp);
 	}
 	_putchar('\n');
-	return (0);			
+	return (0);
 }
