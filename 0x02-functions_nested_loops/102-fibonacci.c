@@ -54,5 +54,6 @@ int main(void)
 		m += n;
 		n = temp;
 	}
+	_putchar('\n');
 	return (0);
 }
