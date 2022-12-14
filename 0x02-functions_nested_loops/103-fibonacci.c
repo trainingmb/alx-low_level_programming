@@ -54,7 +54,7 @@ int main(void)
 		m += n;
 		n = temp;
 	}
-	_putnumber(sum, 1,' ');
+	_putnumber(sum, 1, ' ');
 	_putchar('\n');
 	return (0);
 }
