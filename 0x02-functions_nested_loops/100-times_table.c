@@ -41,18 +41,21 @@ void _putnumber(int i, int digits, char filler)
  */
 void print_times_table(int n)
 {
-	int i, j;
-
-	for (i = 0; i < (n+1); i++)
+	if (n > 0 && n <= 15)
 	{
-		_putchar('0');
-		_putchar(',');
-		for (j = 1; j < (n+1); j++)
+		int i, j;
+
+		for (i = 0; i < (n+1); i++)
 		{
-			_putnumber(i * j, 4, ' ');
-			if (j != 9)
-				_putchar(',');
+			_putchar('0');
+			_putchar(',');
+			for (j = 1; j < (n+1); j++)
+			{
+				_putnumber(i * j, 4, ' ');
+				if (j != n)
+					_putchar(',');
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
