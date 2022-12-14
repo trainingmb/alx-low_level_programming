@@ -16,8 +16,8 @@ void _putnumber(long i, int digits, char filler)
 
 	while (ld >= 1)
 	{
-		long long mod = i % ld;
-		long long div = i / ld;
+		long mod = i % ld;
+		long div = i / ld;
 
 		if (flag || div > 0 || dg == 1)
 		{
