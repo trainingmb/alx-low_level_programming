@@ -35,21 +35,21 @@ void _putnumber(int i, int digits, char filler)
 }
 
 /**
- * times_table - prints nxn times table
+ * print_times_table - prints nxn times table
  * @n: Number to which the n*n times table is printed
  * Return:	No return
  */
 void print_times_table(int n)
 {
-	if (n > 0 && n <= 15)
+	if (n >= 0 && n <= 15)
 	{
 		int i, j;
 
-		for (i = 0; i < (n+1); i++)
+		for (i = 0; i < (n + 1); i++)
 		{
 			_putchar('0');
 			_putchar(',');
-			for (j = 1; j < (n+1); j++)
+			for (j = 1; j < (n + 1); j++)
 			{
 				_putnumber(i * j, 4, ' ');
 				if (j != n)
