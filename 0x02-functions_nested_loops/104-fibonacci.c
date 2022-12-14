@@ -6,7 +6,7 @@
  * @a: int vector of length 30
  * Return: No return
  */
-void printnumber(int a[])
+void printnumberv(int a[])
 {
 	int i = 0, flag = 0;
 
@@ -25,7 +25,7 @@ void printnumber(int a[])
  * @b: int vector of length 30
  * Return: No return
  */
-void copy(int a[], int b[])
+void copyv(int a[], int b[])
 {
 	int i = 0;
 
@@ -40,7 +40,7 @@ void copy(int a[], int b[])
  * @b: int vector of length 30
  * Return: No return
  */
-void add(int a[], int b[])
+void addv(int a[], int b[])
 {
 	int i = 0, carry = 0, temp = 0;
 
@@ -66,16 +66,16 @@ int main(void)
 					0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	int c = 0;
 
-	printnumber(n);
+	printnumberv(n);
 	while (c < 97)
 	{
 		_putchar(',');
 		_putchar(' ');
-		printnumber(m);
+		printnumberv(m);
 		c++;
-		copy(temp,m);
-		add(m,n);
-		copy(n,temp);
+		copyv(temp,m);
+		addv(m,n);
+		copyv(n,temp);
 	}
 	_putchar('\n');
 	return (0);			
