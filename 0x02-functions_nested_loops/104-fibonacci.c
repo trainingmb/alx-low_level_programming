@@ -10,7 +10,7 @@
  */
 void _putnumber(unsigned long i, int digits, char filler)
 {
-	unsigned long ld = 10000000000000000000;
+	unsigned long ld = 10000000000000000000UL;
 	char flag = 0;
 	int dg = 20;
 
