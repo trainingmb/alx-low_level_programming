@@ -8,9 +8,9 @@
  * @filler:	The filler character before the number
  * Return:	No return
  */
-void _putnumber(long long i, int digits, char filler)
+void _putnumber(long i, int digits, char filler)
 {
-	long long ld = 1000000000000000000;
+	long ld = 1000000000000000000;
 	char flag = 0;
 	int dg = 19;
 
@@ -41,8 +41,7 @@ void _putnumber(long long i, int digits, char filler)
  */
 int main(void)
 {
-	long n = 1, m = 2, c = 0, temp = 0;
-	long long sum = 0;
+	long n = 1, m = 2, c = 0, temp = 0, sum = 0;
 
 	while (m <= 4000000)
 	{
