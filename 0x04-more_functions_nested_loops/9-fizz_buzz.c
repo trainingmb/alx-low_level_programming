@@ -4,7 +4,7 @@
 /**
  * printFizz -  Prints Fizz
  */
-void printFizz()
+void printFizz(void)
 {
 	_putchar('F');
 	_putchar('i');
@@ -14,7 +14,7 @@ void printFizz()
 /**
  * printBuzz -  Prints Buzz
  */
-void printBuzz()
+void printBuzz(void)
 {
 	_putchar('B');
 	_putchar('u');
@@ -88,5 +88,6 @@ int main(void)
 		_putchar(' ');
 		n++;
 	}
+	_putchar('\n');
 	return (0);
 }
