@@ -45,7 +45,7 @@ void more_numbers(void)
 
 	while (n < 10)
 	{
-		m = 1;
+		m = 0;
 		while (m < 15)
 		{
 			_putnumber(m, 1, ' ');
