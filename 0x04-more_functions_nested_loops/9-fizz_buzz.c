@@ -66,7 +66,6 @@ int main(void)
 	int n = 2;
 
 	_putchar('1');
-	_putchar(' ');
 	while (n < 101)
 	{
 		_putchar(' ');
