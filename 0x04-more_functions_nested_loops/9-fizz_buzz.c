@@ -63,10 +63,13 @@ void _putnumber(int i, int digits, char filler)
  */
 int main(void)
 {
-	int n = 1;
+	int n = 2;
 
+	_putchar('1');
+	_putchar(' ');
 	while (n < 101)
 	{
+		_putchar(' ');
 		switch (((n % 3) == 0) + (2 * ((n % 5) == 0)))
 		{
 			case 0:
@@ -85,7 +88,6 @@ int main(void)
 			default:
 				break;
 		}
-		_putchar(' ');
 		n++;
 	}
 	_putchar('\n');
