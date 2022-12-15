@@ -9,9 +9,11 @@ void print_number(int n)
 {
 	int ld = 1;
 	char flag = 0;
-	int i = 0, dg = 10;
+	int dg = 10, i = 0;
+	int digits = 1;
+	char filler = ' ';
 
-	while (i < 10)
+	while (i < 9)
 	{
 		ld = ld * 10;
 		i++;
@@ -32,6 +34,10 @@ void print_number(int n)
 		{
 			_putchar(div + '0');
 			flag = 1;
+		}
+		else if (dg <= digits)
+		{
+			_putchar(filler);
 		}
 		n = mod;
 		ld = ld / 10;
