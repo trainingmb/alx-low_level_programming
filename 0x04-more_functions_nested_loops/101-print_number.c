@@ -9,7 +9,7 @@ void print_number(int n)
 {
 	int ld = 1;
 	char flag = 0;
-	int i = 0;
+	int i = 0, dg = 10;
 
 	while (i < 10)
 	{
