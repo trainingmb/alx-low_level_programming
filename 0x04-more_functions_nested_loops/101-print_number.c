@@ -7,9 +7,9 @@
  */
 void print_number(int n)
 {
-	int ld = 10000000000;
+	int ld = 1000000000;
 	char flag = 0;
-	int dg = 11;
+	int dg = 10;
 	int digits = 1;
 	char filler = ' ';
 
