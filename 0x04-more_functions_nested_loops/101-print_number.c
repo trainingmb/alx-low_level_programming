@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _putnumber - prints number provided
- * @i:		The number to print
+ * print_number - prints number provided
+ * @n:		The number to print
  * Return:	No return
  */
 void print_number(int n)
