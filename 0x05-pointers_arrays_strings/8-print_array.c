@@ -58,6 +58,7 @@ void print_array(int *a, int n)
 			_putchar(',');
 			_putchar(' ');
 		}
+		siz++;
 	}
 	_putchar('\n');
 }
