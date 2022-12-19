@@ -32,7 +32,7 @@ int password(int c, char pwd[])
 		}
 		sum += pwd[i];
 		i++;
-		if (sum < 2772)
+		if (sum > 2772)
 		{
 			pwd[i] = 2772 - sum - '0';
 			i++;
