@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _strcpy - prints every other character of a string,
- * starting with the first character, followed by a new line
+ * _strcpy - copies the string pointed to by src,
+ * including the terminating null byte (\0),
+ * to the buffer pointed to by dest
  * @dest : String pointer destination
  * @src : String pointer source
- * Return : return destation pointer
+ * Return: return destination pointer
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -17,5 +18,5 @@ char *_strcpy(char *dest, char *src)
 		siz++;
 	}
 	dest[siz] = src[siz];
-	return dest;
+	return (dest);
 }
