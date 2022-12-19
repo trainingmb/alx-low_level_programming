@@ -51,7 +51,7 @@ void print_array(int *a, int n)
 
 	while (siz < n)
 	{
-		_putnumber(a[siz]);
+		print_number(a[siz]);
 
 		if (siz < (n-1))
 		{
