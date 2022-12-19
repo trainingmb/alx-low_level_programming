@@ -53,7 +53,7 @@ void print_array(int *a, int n)
 	{
 		print_number(a[siz]);
 
-		if (siz < (n-1))
+		if (siz < (n - 1))
 		{
 			_putchar(',');
 			_putchar(' ');
