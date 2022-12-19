@@ -8,9 +8,14 @@ void print_rev(char *s)
 {
 	int siz = 0;
 
-	while (str[siz] != '\0')
+	while (s[siz] != '\0')
 	{
-		_putchar(str[siz++]);
+		siz++;
+	}
+	siz--;
+	while (siz >= 0)
+	{
+		_putchar(s[siz--]);
 	}
 	_putchar('\n');
 }
