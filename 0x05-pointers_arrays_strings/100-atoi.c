@@ -19,16 +19,20 @@ int _atoi(char *s)
 		{
 			while ((s[siz] >= '0') && s[siz] <= '9')
 			{
-				ret = (ret * 10) + (s[siz] - '0');
+
+				if (negcount % 2)
+				{
+					ret = (ret * 10) - (s[siz] - '0');
+				}
+				else
+				{
+					ret = (ret * 10) + (s[siz] - '0');
+				}
 				siz++;
 			}
 			break;
 		}
 		siz++;
-	}
-	if (negcount % 2)
-	{
-		return (ret * -1);
 	}
 	return (ret);
 }
