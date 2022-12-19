@@ -6,18 +6,18 @@
  * password - generate random uppercase, lowercase or number
  * @c: length of password
  * @pwd: generated password pointer
- *
+ * Return: Returns length n
  */
-void password(int c, char pwd[])
+int password(int c, char pwd[])
 {
 	int s;
-	int i = 0;
+	int i = 0, sum = 0;
 
 	srand(time(NULL));
 
 	while (i < c)
 	{
-		s = rand() % 4;
+		s = rand() % 3;
 		switch (s)
 		{
 			case 0:
@@ -29,12 +29,17 @@ void password(int c, char pwd[])
 			case 2:
 				pwd[i] = (rand() % 9) + '0';
 				break;
-			case 3:
-				pwd[i] = ((rand() % 15) + 12);
-				break;
 		}
+		sum += pwd[i];
 		i++;
+		if (sum < 2772)
+		{
+			pwd[i] = 2772 - sum - '0';
+			i++
+			break;
+		}
 	}
+	return (i);
 }
 
 /**
@@ -44,10 +49,11 @@ void password(int c, char pwd[])
  */
 int main(void)
 {
-	char pwd[24];
+	char pwd[60];
+	int n;
 
-	password(23, pwd);
-	pwd[23] = '\0';
+	n = password(60, pwd);
+	pwd[n] = '\0';
 	printf("%s\n", pwd);
 
 	return (0);
