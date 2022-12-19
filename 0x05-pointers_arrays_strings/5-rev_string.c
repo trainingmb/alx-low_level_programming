@@ -17,7 +17,7 @@ void rev_string(char *s)
 	}
 	n = siz / 2;
 	siz--;
-	while (siz > n)
+	while (zis < n)
 	{
 		temp = s[siz];
 		s[siz] = s[zis];
