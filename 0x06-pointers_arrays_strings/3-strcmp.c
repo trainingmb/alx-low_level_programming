@@ -4,11 +4,11 @@
  * _strcmp - work exactly like strcmp,
  * including the terminating null byte (\0),
  * to the buffer pointed to by dest
- * @dest : String pointer destination
- * @src : String pointer source
- * Return: return integer
+ * @s1 : String pointer destination
+ * @s2 : String pointer source
+ * Return: return integer difference
  */
-int _strcmp(char *s1, char *s2)
+int _strcmp (char *s1, char *s2)
 {
 	int siz = 0, i = 0, j = 0, ret = 0;
 

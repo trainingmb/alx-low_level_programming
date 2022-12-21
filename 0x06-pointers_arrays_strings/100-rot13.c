@@ -5,7 +5,7 @@
  * @str : String to rotate
  * Return: Return rotated string
  */
-char *rot13(char * str)
+char *rot13(char *str)
 {
 	int siz = 0, i = 0;
 	char chg;

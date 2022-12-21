@@ -10,27 +10,27 @@ char checkStart(char l)
 {
 	if (l == ' ' || l == '\n' || l == '\t')
 	{
-		return 1;
+		return (1);
 	}
 	else if (l == ',' || l == ';' || l == '.')
 	{
-		return 1;
+		return (1);
 	}
 	else if (l == '!' || l == '?' || l == '\"')
 	{
-		return 1;
+		return (1);
 	}
 	else if (l == '(' || l == ')' || l == '{')
 	{
-		return 1;
+		return (1);
 	}
 	else if (l == '}')
 	{
-		return 1;
+		return (1);
 	}
 	else
 	{
-		return 0;
+		return (0);
 	}
 }
 /**
