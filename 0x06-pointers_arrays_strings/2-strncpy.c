@@ -19,6 +19,9 @@ char *_strncpy(char *dest, char *src, int n)
 		i++;
 		siz++;
 	}
-	dest[siz] = '\0';
+	if (i != n)
+	{
+		dest[siz] = '\0';
+	}
 	return (dest);
 }
