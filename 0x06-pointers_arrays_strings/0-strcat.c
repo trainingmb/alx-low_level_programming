@@ -12,6 +12,10 @@ char *_strcat(char *dest, char *src)
 {
 	int siz = 0;
 
+	while (dest[siz] != '\0')
+	{
+		siz++;
+	}
 	while (src[siz] != '\0')
 	{
 		dest[siz] = src[siz];
