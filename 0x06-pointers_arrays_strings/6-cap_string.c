@@ -39,11 +39,11 @@ char checkStart(char l)
  * @str : String pointer
  * Return: String pointer
  */
-char *cap_string(char * str)
+char *cap_string(char *str)
 {
 	int i = 0;
 
-	for(i = 0; str[i + 1] != '\0'; i++)
+	for (i = 0; str[i + 1] != '\0'; i++)
 	{
 		if (checkStart(str[i]) && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
 		{
