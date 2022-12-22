@@ -43,6 +43,10 @@ char *cap_string(char *str)
 {
 	int i = 0;
 
+	if ((str[0] >= 'a' && str[0] <= 'z'))
+	{
+		str[0] = str[0] - 'a' + 'A';
+	}
 	for (i = 0; str[i + 1] != '\0'; i++)
 	{
 		if (checkStart(str[i]) && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
