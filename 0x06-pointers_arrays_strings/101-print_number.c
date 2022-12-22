@@ -20,7 +20,6 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
 	}
 
 	while (ld >= 1)
@@ -28,7 +27,7 @@ void print_number(int n)
 		int mod = n % ld;
 		int div = n / ld;
 
-		if (flag || div > 0 || dg == 1)
+		if (flag || div != 0 || dg == 1)
 		{
 			if (n < 0)
 			{
