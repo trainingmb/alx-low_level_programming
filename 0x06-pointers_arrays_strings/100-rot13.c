@@ -7,7 +7,7 @@
  */
 char *rot13(char *str)
 {
-	int siz = 0, i = 0;
+	int i = 0;
 	char chg;
 
 	for (i = 0; str[i] != '\0'; ++i)
