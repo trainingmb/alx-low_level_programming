@@ -15,9 +15,9 @@ char *rot13(char *str)
 		if ((str[i] >= 'a' && str[i] <= 'z') ||
 			(str[i] >= 'A' && str[i] <= 'Z'))
 		{
-			str[i] = ((str[i] - chg + 13) % 26) +
-					((str[i] >= 'a' && str[i] <= 'z') * 'a') +
+			chg = ((str[i] >= 'a' && str[i] <= 'z') * 'a') +
 					((str[i] >= 'A' && str[i] <= 'Z') * 'A');
+			str[i] = ((str[i] - chg + 13) % 26);
 		}
 	}
 	return (str);
