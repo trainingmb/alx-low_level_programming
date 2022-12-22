@@ -30,7 +30,14 @@ void print_number(int n)
 
 		if (flag || div > 0 || dg == 1)
 		{
-			_putchar(div + '0');
+			if (n < 0)
+			{
+				_putchar(-div + '0');
+			}
+			else
+			{
+				_putchar(div + '0');
+			}
 			flag = 1;
 		}
 		n = mod;
