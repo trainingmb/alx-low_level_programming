@@ -26,7 +26,7 @@ char in(char *c, char *a)
 
 
 /**
- * _strpbrk - locates the first occurrence in
+ * _strstr - locates the first occurrence in
  * the string s of any of the bytes in the string
  * @haystack: the pointer for the string
  * @needle: the pointer containing the bytes
