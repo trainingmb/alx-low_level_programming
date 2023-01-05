@@ -6,6 +6,23 @@
  */
 void _print_rev_recursion(char *s)
 {
+	if (s[0] == '\n')
+	{
+		_pr(&s[1]);
+	}
+	else
+	{
+		_pr(s);
+	}
+}
+
+/**
+ * _pr - prints a string in reverse,
+ * followed by a new line
+ * @s: string
+ */
+void _pr(char *s)
+{
 	if (s[0] == '\0')
 	{
 		char c = '\n';
@@ -14,7 +31,7 @@ void _print_rev_recursion(char *s)
 	}
 	else
 	{
-		_print_rev_recursion(&s[1]);
+		_pr(&s[1]);
 		write(1, s, 1);
 	}
 }
