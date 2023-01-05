@@ -1,4 +1,26 @@
 /**
+ * _sqrt - Sqrt
+ * @n: number
+ * @m: number
+ *
+ * Return: return recursion
+ */
+int _sqrt(int n, int m)
+{
+	int sqr = i * i;
+
+	if (sqr > (n / 2))
+	{
+		return (-1);
+	}
+	if (sqr == n)
+	{
+		return (i);
+	}
+	return (_sqrt(n, i + 1));
+}
+
+/**
  * _sqrt_recursion - Sqrt
  * @n: number
  *
@@ -22,26 +44,4 @@ int _sqrt_recursion(int n)
 	{
 		return (_sqrt(n, 1));
 	}
-}
-
-/**
- * _sqrt - Sqrt
- * @n: number
- * @m: number
- *
- * Return: return recursion
- */
-int _sqrt(int n, int m)
-{
-	int sqr = i * i;
-
-	if (sqr > (n / 2))
-	{
-		return (-1);
-	}
-	if (sqr == n)
-	{
-		return (i);
-	}
-	return (_sqrt(n, i + 1));
 }
