@@ -9,7 +9,7 @@ int _sqrt(int n, int m)
 {
 	int sqr = m * m;
 
-	if (sqr > (n / 2))
+	if (m > (n / 2))
 	{
 		return (-1);
 	}
