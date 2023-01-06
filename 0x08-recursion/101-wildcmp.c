@@ -35,7 +35,7 @@ int wildcmp(char *s1, char *s2)
 		
 		a = (wildcmp(&s1[0], &s2[1]));
 		b = (wildcmp(&s1[1], &s2[1]));
-		a = (wildcmp(&s1[1], &s2[0]));
+		c = (wildcmp(&s1[1], &s2[0]));
 		return a || b || c;
 	}
 	else
