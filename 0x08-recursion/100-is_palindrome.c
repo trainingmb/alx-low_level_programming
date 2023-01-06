@@ -13,7 +13,7 @@ int p(char *s, int n)
 	}
 	else
 	{
-		return (p(&s[1], n+1));
+		return (p(&s[1], n + 1));
 	}
 }
 
@@ -34,7 +34,7 @@ int q(char *s, int n, int m)
 	}
 	else if (s[n] == s[m])
 	{
-		return (q(s,n+1,m-1));
+		return (q(s, n + 1, m - 1));
 	}
 	else
 	{
@@ -51,7 +51,7 @@ int q(char *s, int n, int m)
 int is_palindrome(char *s)
 {
 	int len;
-	
-	len = p(s,0);
-	return (q(s,0,len-1));
+
+	len = p(s, 0);
+	return (q(s, 0, len - 1));
 }
