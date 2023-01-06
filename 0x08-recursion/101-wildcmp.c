@@ -14,7 +14,7 @@ int wildcmp(char *s1, char *s2)
 		{
 			return (1);
 		}
-		else if(s2[0] == '*')
+		else if (s2[0] == '*')
 		{
 			return (wildcmp(&s1[0], &s2[1]));
 		}
@@ -30,11 +30,11 @@ int wildcmp(char *s1, char *s2)
 	else if (s2[0] == '*')
 	{
 		int a, b, c;
-		
+
 		a = (wildcmp(&s1[0], &s2[1]));
 		b = (wildcmp(&s1[1], &s2[1]));
 		c = (wildcmp(&s1[1], &s2[0]));
-		return a || b || c;
+		return (a || b || c);
 	}
 	else
 	{
