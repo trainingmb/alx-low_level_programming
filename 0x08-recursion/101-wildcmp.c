@@ -12,11 +12,11 @@ int wildcmp(char *s1, char *s2)
 	{
 		int i = 0;
 		
-		while (s[i] == '*')
+		while (s2[i] == '*')
 		{
 			i++;
 		}
-		if (s[i] == '\0')
+		if (s2[i] == '\0')
 		{
 			return (1);
 		}
