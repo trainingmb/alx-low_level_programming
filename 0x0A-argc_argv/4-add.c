@@ -9,7 +9,7 @@
  **/
 int main(int argc, char *argv[])
 {
-	int n = 0,m = 0;
+	int n = 0,m = 0,i = 1;
 
 	if(argc < 2)
 	{
@@ -17,19 +17,18 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	n = atoi(argv[1]);
-	m = atoi(argv[2]);
-	if((n == 0) && !(argv[1][0] == '0'))
+	while (i < argc)
 	{
-		printf("Error\n");
-		return (1);
+		m = atoi(argv[i]);
+		if((m == 0) && !(argv[i][0] == '0'))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		n += m;
 	}
-	if((m == 0) && !(argv[2][0] == '0'))
-	{
-		printf("Error\n");
-		return (1);
-	}
-	printf("%d\n", n+m);
+
+	printf("%d\n", n);
 
 	return (0);
 }
