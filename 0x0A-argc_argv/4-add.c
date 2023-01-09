@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 		n += m;
+		i++;
 	}
 
 	printf("%d\n", n);
