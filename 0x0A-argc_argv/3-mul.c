@@ -9,13 +9,13 @@
  **/
 int main(int argc, char *argv[])
 {
+	int n, m;
+
 	if(argc < 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	int n;
-	int m;
 
 	n = atoi(argv[1]);
 	m = atoi(argv[2]);
