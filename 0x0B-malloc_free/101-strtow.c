@@ -72,7 +72,7 @@ char **strtow(char *str)
 	no = countstr(&str[i]);
 	if (no == 0)
 		return (NULL);
-	ret = malloc(sizeof(char *) * (no));
+	ret = malloc(sizeof(char *) * (no + 1));
 	if (ret == NULL)
 		return (NULL);
 	for (i = i; str[i] != '\0'; i++)
@@ -99,5 +99,6 @@ char **strtow(char *str)
 			i--;
 		}
 	}
+	ret[no] = '\0';
 	return (ret);
 }
