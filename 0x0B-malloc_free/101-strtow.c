@@ -67,13 +67,12 @@ char **strtow(char *str)
 	no = 0;
 	k = 0;
 	i = -1;
-	while (str[++i] == ' ');
+	while (str[++i] == ' ')
+		i = i;
 	no = countstr(&str[i]);
 	ret = malloc(sizeof(char *) * (no));
 	if (ret == NULL)
-	{
 		return (NULL);
-	}
 	for (i = i; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
@@ -86,7 +85,12 @@ char **strtow(char *str)
 		{
 			ret[k] = sss(&str[i]);
 			if (ret[k] == NULL)
+			{
+				while (k >= 0)
+					free(ret[k--]);
+				free(ret);
 				return (NULL);
+			}
 			k++;
 			while (str[i] != ' ' && str[i] != '\0')
 				i++;
