@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * **ss - ss
+ * sss - ss
  * @str: argument count
  * Return: string
  **/
