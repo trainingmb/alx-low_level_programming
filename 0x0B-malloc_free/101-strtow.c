@@ -7,7 +7,7 @@
 char *sss(char *str)
 {
 	int i, size;
-	char* ret;
+	char *ret;
 
 	size = 0;
 	for (i = 0; str[i] != ' '; i++)
@@ -47,7 +47,7 @@ int countstr(char *s)
 			}
 		}
 	}
-	if (s[i-1] != ' ')
+	if (s[i - 1] != ' ')
 	{
 		no++;
 	}
@@ -62,12 +62,14 @@ int countstr(char *s)
 char **strtow(char *str)
 {
 	int no, i, k;
-	char ** ret;
+	char **ret;
 
-	no = 0, k = 0, i = -1;
+	no = 0;
+	k = 0;
+	i = -1;
 	while (str[++i] == ' ');
 	no = countstr(&str[i]);
-	ret = malloc(sizeof(char*) * (no));
+	ret = malloc(sizeof(char *) * (no));
 	if (ret == NULL)
 	{
 		return (NULL);
