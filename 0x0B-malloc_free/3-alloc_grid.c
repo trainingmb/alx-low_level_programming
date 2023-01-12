@@ -23,7 +23,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
-		ret[i] = mallac(sizeof(int) * width);
+		ret[i] = malloc(sizeof(int) * width);
 		if (ret[i] == NULL)
 		{
 			while (--i >= 0)
@@ -41,22 +41,5 @@ int **alloc_grid(int width, int height)
 			}
 		}
 	}
-	ret = malloc(sizeof(char) * (size1 + size2 + 1));
-
-	if (ret == NULL)
-		return (NULL);
-
-	while (i < size1)
-	{
-		ret[i] = s1[i];
-		i++;
-	}
-	i = 0;
-	while (i < size2)
-	{
-		ret[i + size1] = s2[i];
-		i++;
-	}
-	ret[size1 + size2] = 0;
 	return (ret);
 }
