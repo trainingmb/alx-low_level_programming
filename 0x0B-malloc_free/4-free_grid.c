@@ -8,10 +8,9 @@
  */
 void free_grid(int **grid, int height)
 {
-	int i, j;
+	int i;
 
 	i = 0;
-	j = 0;
 	if (height < 1)
 	{
 		return ;
