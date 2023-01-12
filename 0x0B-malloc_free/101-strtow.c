@@ -95,4 +95,5 @@ char **strtow(char *str)
 			}
 		}
 	}
+	return (ret);
 }
