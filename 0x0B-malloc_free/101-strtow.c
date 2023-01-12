@@ -10,7 +10,7 @@ char *sss(char *str)
 	char *ret;
 
 	size = 0;
-	for (i = 0; str[i] != ' '; i++)
+	for (i = 0; str[i] != ' ' && str[i] != '\0'; i++)
 	{
 		size++;
 	}
@@ -19,7 +19,7 @@ char *sss(char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0; str[i] != ' '; i++)
+	for (i = 0; str[i] != ' ' && str[i] != '\0'; i++)
 	{
 		ret[i] = str[i];
 	}
@@ -47,7 +47,7 @@ int countstr(char *s)
 			}
 		}
 	}
-	if (s[i - 1] != ' ')
+	if (i > 0 && s[i - 1] != ' ')
 	{
 		no++;
 	}
@@ -70,6 +70,8 @@ char **strtow(char *str)
 	while (str[++i] == ' ')
 		i = i;
 	no = countstr(&str[i]);
+	if (no == 0)
+		return (NULL);
 	ret = malloc(sizeof(char *) * (no));
 	if (ret == NULL)
 		return (NULL);
