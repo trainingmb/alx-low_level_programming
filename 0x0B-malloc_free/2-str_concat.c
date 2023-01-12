@@ -4,13 +4,13 @@
  * str_concat - Concat 2 strings
  * @s1: the string 1
  * @s2: the string 2
- * 
+ *
  * Return: concated strings or null
  */
 char *str_concat(char *s1, char *s2)
 {
 	char *ret;
-	int size1, size2, i;
+	unsigned int size1, size2, i;
 
 	size1 = 0;
 	size2 = 0;
@@ -47,6 +47,6 @@ char *str_concat(char *s1, char *s2)
 		ret[i + size1] = s2[i];
 		i++;
 	}
-	ret[size1 + size2] = '/0';
+	ret[size1 + size2] = 0;
 	return (ret);
 }
