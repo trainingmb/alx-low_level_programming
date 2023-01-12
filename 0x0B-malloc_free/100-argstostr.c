@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	size++;
 
 	largeStr = malloc(sizeof(char) * size);
-	if (strDup == NULL)
+	if (largeStr == NULL)
 		return (NULL);
 	k = 0;
 	for (i = 0; i < ac; i++)
@@ -37,6 +37,6 @@ char *argstostr(int ac, char **av)
 		}
 		largeStr[k++] = '\n';
 	}
-	strDup[k] = '\0';
-	return (strDup);
+	largeStr[k] = '\0';
+	return (largeStr);
 }
