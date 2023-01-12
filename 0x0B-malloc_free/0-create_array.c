@@ -21,10 +21,11 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 
 	size--;
-	while (size >= 0)
+	while (size > 0)
 	{
 		ret[size] = c;
 		size--;
 	}
+	ret[size] = c;
 	return (ret);
 }
