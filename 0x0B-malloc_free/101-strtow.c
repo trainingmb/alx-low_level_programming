@@ -14,7 +14,7 @@ char *sss(char *str)
     {
         size++;
     }
-    ret = malloc((char) * (size + 1));
+    ret = malloc(sizeof(char) * (size + 1));
     if (ret == NULL)
     {
         return (NULL);
@@ -70,7 +70,7 @@ char **strtow(char *str)
         i++;
     }
     no = countstr(&str[i]);
-    ret = malloc((char*) * (no));
+    ret = malloc(sizeof(char*) * (no));
     if (ret == NULL)
     {
         return (NULL);
