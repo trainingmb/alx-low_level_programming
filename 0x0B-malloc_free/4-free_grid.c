@@ -14,7 +14,7 @@ void free_grid(int **grid, int height)
 	j = 0;
 	if (height < 1)
 	{
-		return (NULL);
+		return ;
 	}
 	for (i = 0; i < height; i++)
 	{
