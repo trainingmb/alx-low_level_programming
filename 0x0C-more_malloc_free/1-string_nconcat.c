@@ -41,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (i = ss1; (i - ss1) < ss2; i++)
 	{
-		ret[i] = s2[(i++ - ss1)];
+		ret[i] = s2[(i - ss1)];
 	}
 	ret[ss1 + ss2] = '\0';
 	return (ret);
