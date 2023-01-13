@@ -19,7 +19,7 @@ char *sss(char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0; str[i] != ' ' && str[i] != '\0'; i++)
+	for (i = 0; i < size; i++)
 	{
 		ret[i] = str[i];
 	}
