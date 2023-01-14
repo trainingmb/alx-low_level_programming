@@ -7,7 +7,7 @@
  * @old_size: old size
  * Return: pointer to the allocated memory or NULL
  */
-void copyval(ptr, ret, old_size)
+void copyval(char *ptr, char *ret, unsigned int old_size)
 {
 	unsigned int i;
 
@@ -28,21 +28,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *ret;
 
-	if (new_size > old_size)
-	{
-		ret = malloc(new_size);
-		if (ret == NULL)
-		{
-			return (NULL);
-		}
-		copyval(ptr, ret, old_size);
-		free(ptr);
-		return (ret);
-	}
-	if (new_size == old_size)
-	{
-		return (ptr);
-	}
 	if (ptr == NULL)
 	{
 		if (new_size == 0)
@@ -54,12 +39,38 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		{
 			return (NULL);
 		}
-		return (ret);
+		return ((void *) ret);
 	}
 	if (ptr != NULL && new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
+	}
+	if (new_size > old_size)
+	{
+		ret = malloc(new_size);
+		if (ret == NULL)
+		{
+			return (NULL);
+		}
+		copyval((char *) ptr, ret, old_size);
+		free(ptr);
+		return ((void *) ret);
+	}
+	if (new_size == old_size)
+	{
+		return (ptr);
+	}
+	if (new_size < old_size)
+	{
+		ret = malloc(new_size);
+		if (ret == NULL)
+		{
+			return (NULL);
+		}
+		copyval((char *) ptr, ret, new_size);
+		free(ptr);
+		return ((void *) ret);
 	}
 }
 
