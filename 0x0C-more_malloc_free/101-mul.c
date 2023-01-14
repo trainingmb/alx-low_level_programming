@@ -39,7 +39,7 @@ unsigned int strsize(char *s)
  * @size: size of s
  * Return: 0 if str contains non-digit
  */
-char scanstr(char* s, unsigned int size)
+char scanstr(char *s, unsigned int size)
 {
 	unsigned int i;
 
