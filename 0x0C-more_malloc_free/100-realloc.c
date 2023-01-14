@@ -27,6 +27,7 @@ void copyval(char *ptr, char *ret, unsigned int old_size)
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *ret;
+	unsigned int size;
 
 	if (ptr == NULL)
 	{
@@ -46,31 +47,19 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	if (new_size > old_size)
-	{
-		ret = malloc(new_size);
-		if (ret == NULL)
-		{
-			return (NULL);
-		}
-		copyval((char *) ptr, ret, old_size);
-		free(ptr);
-		return ((void *) ret);
-	}
 	if (new_size == old_size)
 	{
 		return (ptr);
 	}
-	if (new_size < old_size)
+
+	size = (new_size > old_size? old_size: new_size);
+	ret = malloc(new_size);
+	if (ret == NULL)
 	{
-		ret = malloc(new_size);
-		if (ret == NULL)
-		{
-			return (NULL);
-		}
-		copyval((char *) ptr, ret, new_size);
-		free(ptr);
-		return ((void *) ret);
+		return (NULL);
 	}
+	copyval((char *) ptr, ret, size);
+	free(ptr);
+	return ((void *) ret);
 }
 
