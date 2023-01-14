@@ -6,9 +6,9 @@
  * @s: string to reverse
  * @size: size of s
  */
-void reversestr(char* s, unsigned size)
+void reversestr(char *s, unsigned int size)
 {
-	unsigned i;
+	unsigned int i;
 	char temp;
 
 	for (i = 0; i < (size / 2) ; i++)
@@ -22,10 +22,9 @@ void reversestr(char* s, unsigned size)
 /**
  * strsize - return size of string
  * @s: string too find size
- * 
  * Return: size of string s
  */
-unsigned int strsize(char* s)
+unsigned int strsize(char *s)
 {
 	unsigned int size;
 
@@ -42,14 +41,13 @@ unsigned int strsize(char* s)
  */
 char scanstr(char* s, unsigned int size)
 {
-	unsigned i;
+	unsigned int i;
 
 	for (i = 0; i < (size); i++)
 	{
-		if( s[i] < '0' || s[i] > '9')
+		if (s[i] < '0' || s[i] > '9')
 			return (0);
-		else
-			s[i] -= '0'; 
+		s[i] -= '0';
 	}
 	return (1);
 }
@@ -59,13 +57,13 @@ char scanstr(char* s, unsigned int size)
  * @s: string
  * @size: size of s
  */
-void undoscanstr(char* s, unsigned int size)
+void undoscanstr(char *s, unsigned int size)
 {
-	unsigned i;
+	unsigned int i;
 
 	for (i = 0; i < (size); i++)
 	{
-		s[i] += '0'; 
+		s[i] += '0';
 	}
 }
 
@@ -75,12 +73,12 @@ void undoscanstr(char* s, unsigned int size)
  * @s: string
  * @pos: operating position
  */
-void addto(unsigned int add,char *s, unsigned int pos)
+void addto(unsigned int add, char *s, unsigned int pos)
 {
 	unsigned int sum;
-	
+
 	sum = (add + s[pos]);
-	if((add + s[pos]) > 9)
+	if ((add + s[pos]) > 9)
 	{
 		s[pos] = (char) (sum % 10);
 		addto(sum / 10, s, pos + 1);
@@ -99,7 +97,7 @@ void addto(unsigned int add,char *s, unsigned int pos)
  * @ss2: size of s2 string
  * @os: output string
  */
-void multiply(char *s1,unsigned int ss1,char *s2, unsigned int ss2, char *os)
+void multiply(char *s1, unsigned int ss1, char *s2, unsigned int ss2, char *os)
 {
 	unsigned int i, j;
 
@@ -121,23 +119,23 @@ void multiply(char *s1,unsigned int ss1,char *s2, unsigned int ss2, char *os)
  **/
 int main(int argc, char *argv[])
 {
-	unsigned int n, m;
-	char * result;
+	unsigned int n, m, i = 0;
+	char *result;
 
-	if(argc != 3 )
+	if (argc != 3)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 	n = strsize(argv[1]);
 	m = strsize(argv[2]);
-	if(!scanstr(argv[1], n) || !scanstr(argv[2], m))
+	if (!scanstr(argv[1], n) || !scanstr(argv[2], m))
 	{
 		printf("Error\n");
 		exit(98);
 	}
 	result = calloc(n + m + 1, sizeof(char));
-	if(result == NULL)
+	if (result == NULL)
 	{
 		printf("Error\n");
 		exit(98);
@@ -147,8 +145,15 @@ int main(int argc, char *argv[])
 	multiply(argv[1], n, argv[2], m, result);
 	undoscanstr(result, n + m + 1);
 	reversestr(result, n + m + 1);
+	for (i = 0; i < n + m; i++)
+	{
+		if (result[i] != '0')
+		{
+			break;
+		}
+	}
 
-	printf("%s\n", result);
+	printf("%s\n", &result[i]);
 
 	return (0);
 }
