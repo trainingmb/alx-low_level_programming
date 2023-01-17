@@ -6,8 +6,6 @@
  **/
 int main(void)
 {
-    //Prints the base file expanded from
-    //__BASE_FILE__
 	printf("%s\n", __BASE_FILE__);
 	return (0);
 }
