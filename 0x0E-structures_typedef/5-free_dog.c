@@ -5,13 +5,13 @@
  **/
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
+	if (d != ((void *) 0))
 	{
-		if (d->name != NULL)
+		if (d->name != ((void *) 0))
 		{
 			free(d->name);
 		}
-		if (d->owner != NULL)
+		if (d->owner != ((void *) 0))
 		{
 			free(d->owner);
 		}
