@@ -20,9 +20,7 @@ int main(int argc, char *argv[])
 	operation = get_op_func(argv[2]);
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	if (operation == NULL ||
-		(a == 0 && argv[1][0] != '0')
-		|| (b == 0 && argv[2][0] != '0'))
+	if (operation == NULL)
 	{
 		printf("Error\n");
 		exit(99);
