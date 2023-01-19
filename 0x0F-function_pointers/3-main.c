@@ -9,9 +9,8 @@
  **/
 int main(int argc, char *argv[])
 {
-	int (*operation) (int, int);
+	int (*operation)(int, int);
 	int a, b, result;
-	
 
 	if (argc != 4)
 	{
