@@ -15,22 +15,22 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 	operation = get_op_func(argv[2]);
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	if (operation == NULL ||
 		(a == 0 && argv[1][0] != '0')
-		|| (a == 0 && argv[1][0] != '0'))
+		|| (b == 0 && argv[2][0] != '0'))
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
 	result = operation(a, b);
 	printf("%d\n", result);
