@@ -6,6 +6,6 @@
  **/
 void print_name(char *name, void (*f)(char *))
 {
-	if( f != ((void *) 0))
+	if( f != ((void *) 0) && name != ((void *) 0) && name[0] != '\0')
 		f(name);
 }
