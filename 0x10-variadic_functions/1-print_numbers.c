@@ -12,17 +12,28 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (separator == ((void *) 0))
 	{
-		return;
-	}
-	if (n > 0)
-	{
-		va_start(numbers, n);
-		printf("%d", va_arg(numbers, int));
-		for (i = 1; i < n; i++)
+		if (n > 0)
 		{
-			printf("%s%d", separator, va_arg(numbers, int));
+			va_start(numbers, n);
+			for (i = 0; i < n; i++)
+			{
+				printf("%d", va_arg(numbers, int));
+			}
+			va_end(numbers);
 		}
-		va_end(numbers);
+	}
+	else
+	{
+		if (n > 0)
+		{
+			va_start(numbers, n);
+			printf("%d", va_arg(numbers, int));
+			for (i = 1; i < n; i++)
+			{
+				printf("%s%d", separator, va_arg(numbers, int));
+			}
+			va_end(numbers);
+		}
 	}
 	printf("\n");
 }
