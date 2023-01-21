@@ -10,7 +10,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list numbers;
 
-	if (separator == ((void *) 0) || separator[0] == '\0')
+	if (separator == ((void *) 0))
 	{
 		return;
 	}
