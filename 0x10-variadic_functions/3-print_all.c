@@ -8,7 +8,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i;
 	va_list toprint;
-	char *current, *sep; 
+	char *current, *sep;
 
 	va_start(toprint, format);
 	i = 0;
@@ -18,15 +18,15 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			printf("%s%c",sep , (char) va_arg(toprint, int));
+			printf("%s%c", sep, (char) va_arg(toprint, int));
 			sep = ", ";
 			break;
 		case 'i':
-			printf("%s%d",sep , va_arg(toprint, int));
+			printf("%s%d", sep, va_arg(toprint, int));
 			sep = ", ";
 			break;
 		case 'f':
-			printf("%s%f",sep , (float) va_arg(toprint, double));
+			printf("%s%f", sep, (float) va_arg(toprint, double));
 			sep = ", ";
 			break;
 		case 's':
@@ -35,10 +35,11 @@ void print_all(const char * const format, ...)
 			{
 				current = "(nil)";
 			}
-			printf("%s%s",sep , current);
+			printf("%s%s", sep, current);
 			sep = ", ";
 			break;
 		default:
+			printf("%s", sep);
 			sep = "";
 			break;
 		}
