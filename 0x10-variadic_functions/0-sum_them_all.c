@@ -1,5 +1,3 @@
-#include "variadic_function.h"
-
 /**
  * sum_them_all - a function that searches for an integer
  * @n: number of integers
