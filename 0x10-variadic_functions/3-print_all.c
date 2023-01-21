@@ -1,23 +1,49 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_all - prints numbers, followed by a new line.
+ * print_all - prints toprint, followed by a new line.
  * @format: is a list of types of arguments passed to the function
  **/
 void print_all(const char * const format, ...)
 {
 	unsigned int i;
-	va_list numbers;
+	va_list toprint;
+	char *current, sep; 
 
-	if (n > 0)
+	va_start(toprint, format);
+	i = 0;
+	sep = "";
+	while (format != ((void *) 0) && format[i])
 	{
-		va_start(numbers, n);
-		i = 0;
-		while (i < n)
+		switch (format[i])
 		{
-			printf("%d", va_arg(numbers, int));
+		case 'c':
+			printf("%s%c",sep , va_arg(toprint, char));
+			sep = ", ";
+			break;
+		case 'i':
+			printf("%s%d",sep , va_arg(toprint, int));
+			sep = ", ";
+			break;
+		case 'f':
+			printf("%s%f",sep , va_arg(toprint, float));
+			sep = ", ";
+			break;
+		case 's':
+			current = va_arg(toprint, char *);
+			if (current == ((void *) 0))
+			{
+				current = "(nil)";
+			}
+			printf("%s",sep , current);
+			sep = ", ";
+			break;
+		default:
+			sep = "";
+			break;
 		}
-		va_end(numbers);
+		i++;
 	}
+	va_end(toprint);
 	printf("\n");
 }
