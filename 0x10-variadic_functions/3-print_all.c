@@ -32,9 +32,7 @@ void print_all(const char * const format, ...)
 		case 's':
 			current = va_arg(toprint, char *);
 			if (current == ((void *) 0))
-			{
 				current = "(nil)";
-			}
 			printf("%s%s", sep, current);
 			sep = ", ";
 			break;
