@@ -8,7 +8,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i;
 	va_list toprint;
-	char *current, sep; 
+	char *current, *sep; 
 
 	va_start(toprint, format);
 	i = 0;
@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 			{
 				current = "(nil)";
 			}
-			printf("%s",sep , current);
+			printf("%s%s",sep , current);
 			sep = ", ";
 			break;
 		default:
