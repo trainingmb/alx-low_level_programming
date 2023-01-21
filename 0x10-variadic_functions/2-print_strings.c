@@ -13,43 +13,27 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (separator == ((void *) 0))
 	{
-		if (n > 0)
-		{
-			va_start(numbers, n);
-			for (i = 0; i < n; i++)
-			{
-				current = va_arg(numbers, char *);
-				if (current == ((void *) 0))
-				{
-					current = "(nil)";
-				}
-				printf("%s", current);
-			}
-			va_end(numbers);
-		}
+		separator = "";
 	}
-	else
+	if (n > 0)
 	{
-		if (n > 0)
+		va_start(numbers, n);
+		current = va_arg(numbers, char *);
+		if (current == ((void *) 0))
 		{
-			va_start(numbers, n);
+			current = "(nil)";
+		}
+		printf("%s", current);
+		for (i = 1; i < n; i++)
+		{
 			current = va_arg(numbers, char *);
 			if (current == ((void *) 0))
 			{
 				current = "(nil)";
 			}
-			printf("%s", current);
-			for (i = 1; i < n; i++)
-			{
-				current = va_arg(numbers, char *);
-				if (current == ((void *) 0))
-				{
-					current = "(nil)";
-				}
-				printf("%s%s", separator, current);
-			}
-			va_end(numbers);
+			printf("%s%s", separator, current);
 		}
+		va_end(numbers);
 	}
 	printf("\n");
 }
