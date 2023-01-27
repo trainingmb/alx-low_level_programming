@@ -4,19 +4,21 @@
 char *specifier2str(const char *formart, va_list *args)
 {
 	char *str;
+	unsigned int i;
 
+	i = 0;
 	if ((formart[i] == 'd') || (formart[i] == 'i'))
-		str = int2str(va_arg(args, int));
+		str = int2str(va_arg(*args, int));
 	else if (formart[i] == 's')
-		str = str2str(va_arg(args, char *));
+		str = str2str(va_arg(*args, char *));
 	else if (formart[i] == 'u')
-		str = uint2str(va_arg(args, unsigned int));
+		str = uint2str(va_arg(*args, unsigned int));
 	else if (formart[i] == 'o')
-		str = uoct2str(va_arg(args, unsigned int));
+		str = uoct2str(va_arg(*args, unsigned int));
 	else if (formart[i] == 'x')
-		str = uhex2str(va_arg(args, unsigned int));
+		str = uhex2str(va_arg(*args, unsigned int));
 	else if (formart[i] == 'X')
-		str = UHEX2str(va_arg(args, unsigned int));
+		str = UHEX2str(va_arg(*args, unsigned int));
 	else
 		str = ((void *) 0);
 	return (0);
