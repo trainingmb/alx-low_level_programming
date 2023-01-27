@@ -36,9 +36,9 @@ int _printf(const char *formart, ...)
 			}
 			else
 			{
+				seq = '%';
+				count += buffer_controller(print_buffer, &seq, 'c');
 				seq = 0;
-				buffer_controller(print_buffer, '%', 'c');
-				count++;
 				i--;
 			}
 			if ((seq) && (str != ((void *) 0)))
