@@ -8,6 +8,7 @@ char *specifier2str(const char *formart, va_list *args)
 
 	i = 0;
 	str = "hold something";
+	str[0] = str[1];
 	str = ((void *) 0);
 	if ((formart[i] == 'd') || (formart[i] == 'i'))
 		str = int2str(va_arg(*args, int));
@@ -45,7 +46,6 @@ int _printf(const char *formart, ...)
 			{
 				seq = formart[i] == 'c' ? va_arg(args, int) : '%';
 				count += buffer_controller(print_buffer, &seq, 'c');
-				free(&seq);
 				seq = 0;
 				i = formart[i] == '%' ? i : i - 1;
 			}
