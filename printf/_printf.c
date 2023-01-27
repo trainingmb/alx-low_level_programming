@@ -20,15 +20,23 @@ int _printf(const char *formart, ...)
 				str = int2str(va_arg(args, int));
 			else if (formart[i] == 's')
 				str = str2str(va_arg(args, char *));
+			else if (formart[i] == 'u')
+				str = uint2str(va_arg(args, unsigned int));
+			else if (formart[i] == 'o')
+				str = uoct2str(va_arg(args, unsigned int));
+			else if (formart[i] == 'x')
+				str = uhex2str(va_arg(args, unsigned int));
+			else if (formart[i] == 'X')
+				str = uHEX2str(va_arg(args, unsigned int));
 			else if (formart[i] == 'c')
 			{
+				count += buffer_controller(print_buffer, va_arg(args, char), 'c');
 				seq = 0;
-				i--;
 			}
 			else
 			{
 				seq = 0;
-				buffer_controller(print_buffer, "%", 0);
+				buffer_controller(print_buffer, "%", 'c');
 				count++;
 				i--;
 			}
