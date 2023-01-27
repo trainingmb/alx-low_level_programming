@@ -34,6 +34,10 @@ int _printf(const char *formart, ...)
 				count += buffer_controller(print_buffer, &seq, 'c');
 				seq = 0;
 			}
+			else if (formart[i] == '%')
+			{
+				str = "%";
+			}
 			else
 			{
 				seq = '%';
