@@ -34,17 +34,12 @@ int _printf(const char *formart, ...)
 				count += buffer_controller(print_buffer, &seq, 'c');
 				seq = 0;
 			}
-			else if (formart[i] == '%')
-			{
-				seq = "%";
-				str = &seq;
-			}
 			else
 			{
 				seq = '%';
 				count += buffer_controller(print_buffer, &seq, 'c');
 				seq = 0;
-				i--;
+				i = formart[i] == '%' ? i : i - 1;
 			}
 			if ((seq) && (str != ((void *) 0)))
 			{
