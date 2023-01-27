@@ -37,7 +37,7 @@ int _printf(const char *formart, ...)
 			else
 			{
 				seq = 0;
-				buffer_controller(print_buffer, "%", 'c');
+				buffer_controller(print_buffer, '%', 'c');
 				count++;
 				i--;
 			}
