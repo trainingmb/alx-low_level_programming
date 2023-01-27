@@ -5,7 +5,7 @@
  * @args: Pointer to va list
  * Return: the int in a string
  */
-char *uint(va_list *args)
+char *_uint(va_list *args)
 {
 	return (uint2str(va_arg(*args, int)));
 }
