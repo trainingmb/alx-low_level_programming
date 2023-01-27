@@ -8,7 +8,6 @@ char *specifier2str(const char *formart, va_list *args)
 
 	str = "hold something";
 	i = str[1] - str[1];
-	i = 0;
 	str = ((void *) 0);
 	if ((formart[i] == 'd') || (formart[i] == 'i'))
 		str = int2str(va_arg(*args, int));
@@ -22,7 +21,7 @@ char *specifier2str(const char *formart, va_list *args)
 		str = uhex2str(va_arg(*args, unsigned int));
 	else if (formart[i] == 'X')
 		str = UHEX2str(va_arg(*args, unsigned int));
-	return (0);
+	return (str);
 }
 /**
  * _printf - PRINTF
