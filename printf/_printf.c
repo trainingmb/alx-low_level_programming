@@ -1,4 +1,26 @@
 #include "main.h"
+
+
+char *specifier2str(const char *formart, va_list *args)
+{
+	char *str;
+
+	if ((formart[i] == 'd') || (formart[i] == 'i'))
+		str = int2str(va_arg(args, int));
+	else if (formart[i] == 's')
+		str = str2str(va_arg(args, char *));
+	else if (formart[i] == 'u')
+		str = uint2str(va_arg(args, unsigned int));
+	else if (formart[i] == 'o')
+		str = uoct2str(va_arg(args, unsigned int));
+	else if (formart[i] == 'x')
+		str = uhex2str(va_arg(args, unsigned int));
+	else if (formart[i] == 'X')
+		str = UHEX2str(va_arg(args, unsigned int));
+	else
+		str = ((void *) 0);
+	return (0);
+}
 /**
  * _printf - PRINTF
  * @formart: the string formart
@@ -16,27 +38,10 @@ int _printf(const char *formart, ...)
 	{
 		if (seq)
 		{
-			if ((formart[i] == 'd') || (formart[i] == 'i'))
-				str = int2str(va_arg(args, int));
-			else if (formart[i] == 's')
-				str = str2str(va_arg(args, char *));
-			else if (formart[i] == 'u')
-				str = uint2str(va_arg(args, unsigned int));
-			else if (formart[i] == 'o')
-				str = uoct2str(va_arg(args, unsigned int));
-			else if (formart[i] == 'x')
-				str = uhex2str(va_arg(args, unsigned int));
-			else if (formart[i] == 'X')
-				str = UHEX2str(va_arg(args, unsigned int));
-			else if (formart[i] == 'c')
+			str = specifier2str(&formart[i], &args);
+			if (str != ((void *) 0))
 			{
-				seq = va_arg(args, int);
-				count += buffer_controller(print_buffer, &seq, 'c');
-				seq = 0;
-			}
-			else
-			{
-				seq = '%';
+				seq = formart[i] == 'c' ? va_arg(args, int) : '%';
 				count += buffer_controller(print_buffer, &seq, 'c');
 				seq = 0;
 				i = formart[i] == '%' ? i : i - 1;
