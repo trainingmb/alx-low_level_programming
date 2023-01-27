@@ -30,7 +30,8 @@ int _printf(const char *formart, ...)
 				str = UHEX2str(va_arg(args, unsigned int));
 			else if (formart[i] == 'c')
 			{
-				count += buffer_controller(print_buffer, &(va_arg(args, int)), 'c');
+				seq = va_arg(args, int);
+				count += buffer_controller(print_buffer, &seq, 'c');
 				seq = 0;
 			}
 			else
