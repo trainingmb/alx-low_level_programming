@@ -4,7 +4,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-struct modifer{
+struct modifer
+{
 	char left_just;
 	char filler;
 	char sign;
@@ -28,7 +29,7 @@ char *UHEX2str(const unsigned int);
 char *addr2str(const char *);
 char *str2str(const char *);
 int buffer_controller(char *, const char *str, char);
-int flush_buffer(char *,unsigned int);
+int flush_buffer(char *, unsigned int);
 
 int _printf(const char *formart, ...);
 

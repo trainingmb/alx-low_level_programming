@@ -94,7 +94,7 @@ int buffer_controller(char *print_buffer, const char *str, char flush)
 		indx = 0;
 		return (0);
 	}
-	if(flush == 'c')
+	if (flush == 'c')
 	{
 		print_buffer[indx] = str[0];
 		i++;
