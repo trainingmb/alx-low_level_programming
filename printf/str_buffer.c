@@ -79,7 +79,6 @@ char *str2str(const char *str)
  * buffer_controller - ensures the write function is not called too often
  * @print_buffer: the buffer
  * @str: The string write to buffer
- * @mx: the maximum length
  * @flush: falg to flush
  * Return: length of string written
  */
@@ -113,7 +112,7 @@ int buffer_controller(char *print_buffer, const char *str, char flush)
 }
 /**
  * flush_buffer - clears out the buffer
- * print_buffer: the buffer to write from
+ * @print_buffer: the buffer to write from
  * @len: the length to write
  * Return: length of string written to standard output
  */

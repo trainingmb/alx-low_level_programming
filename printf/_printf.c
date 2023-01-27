@@ -8,7 +8,7 @@ int _printf(const char *formart, ...)
 {
 	va_list args;
 	unsigned int i, count;
-	char seq, print_buffer[(BUFFER_LEN) + 1], *str;
+	char seq, print_buffer[(BUFFER_LEN)], *str;
 
 	count = i = seq = 0;
 	va_start(args, formart);
@@ -32,13 +32,10 @@ int _printf(const char *formart, ...)
 				count++;
 				i--;
 			}
-			if (seq)
+			if ((seq) && (str != ((void *) 0)))
 			{
-				if (str != ((void *) 0))
-				{
-					count += buffer_controller(print_buffer, str, 0);
-					seq = 0;
-				}
+				count += buffer_controller(print_buffer, str, 0);
+				seq = 0;
 			}
 		}
 		else
