@@ -21,6 +21,8 @@ char *int2str(int num)
 		num *= -1;
 		len++;
 	}
+	else
+		neg = 0;
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 	{
