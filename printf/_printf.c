@@ -36,7 +36,8 @@ int _printf(const char *formart, ...)
 			}
 			else if (formart[i] == '%')
 			{
-				str = "%";
+				seq = "%"
+				str = &seq;
 			}
 			else
 			{
