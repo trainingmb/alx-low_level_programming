@@ -4,14 +4,30 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-struct modifer
+/**
+ * struct modifer - Modifier
+ *
+ * @left_just: is left justified
+ * @filler: the filler character
+ * @sign: should be signed
+ * @width: minimum width
+ * @endindx: end index in the string
+ */
+typedef struct modifer
 {
 	char left_just;
 	char filler;
 	char sign;
 	unsigned int width;
 	unsigned int endindx;
-};
+} modif;
+
+/**
+ * struct sel - Selection option
+ *
+ * @seq: identifying seq
+ * @f: fucntion to call
+ */
 typedef struct sel
 {
 	char seq;
