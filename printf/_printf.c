@@ -27,10 +27,10 @@ int _printf(const char *formart, ...)
 			else if (formart[i] == 'x')
 				str = uhex2str(va_arg(args, unsigned int));
 			else if (formart[i] == 'X')
-				str = uHEX2str(va_arg(args, unsigned int));
+				str = UHEX2str(va_arg(args, unsigned int));
 			else if (formart[i] == 'c')
 			{
-				count += buffer_controller(print_buffer, va_arg(args, char), 'c');
+				count += buffer_controller(print_buffer, &(va_arg(args, int)), 'c');
 				seq = 0;
 			}
 			else
