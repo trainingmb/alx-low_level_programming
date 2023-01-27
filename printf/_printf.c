@@ -44,12 +44,12 @@ int _printf(const char *formart, ...)
 				seq = 1;
 			else
 			{
-				buffer_controller(print_buffer, &formart[i], 0);
+				buffer_controller(print_buffer, &formart[i], 'c');
 				count++;
 			}
 		}
 	}
-	buffer_controller(print_buffer, "", 1);
+	buffer_controller(print_buffer, "", 'f');
 	va_end(args);
 	return (count);
 }

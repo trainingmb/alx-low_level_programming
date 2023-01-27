@@ -79,7 +79,7 @@ char *str2str(const char *str)
  * buffer_controller - ensures the write function is not called too often
  * @print_buffer: the buffer
  * @str: The string write to buffer
- * @flush: falg to flush
+ * @flush: flag to flush or add 1 char
  * Return: length of string written
  */
 int buffer_controller(char *print_buffer, const char *str, char flush)
@@ -88,11 +88,18 @@ int buffer_controller(char *print_buffer, const char *str, char flush)
 	int i;
 
 	i = 0;
-	if ((str == ((void *) 0) || str[0] == '\0') && flush)
+	if ((str == ((void *) 0) || str[0] == '\0') && (flush == 'f'))
 	{
 		flush_buffer(print_buffer, indx);
 		indx = 0;
 		return (0);
+	}
+	if(flush == 'c')
+	{
+		print_buffer[indx] = str[0];
+		i++;
+		indx++;
+		return (1);
 	}
 	while (str[i] != '\0')
 	{
