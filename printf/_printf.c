@@ -28,7 +28,7 @@ int _printf(const char *formart, ...)
 			else
 			{
 				seq = 0;
-				buffer_controller(print_buffer, "%", 1, 0);
+				buffer_controller(print_buffer, "%", 0);
 				count++;
 				i--;
 			}
@@ -36,7 +36,7 @@ int _printf(const char *formart, ...)
 			{
 				if (str != ((void *) 0))
 				{
-					count += buffer_controller(print_buffer, str, _strlen(str), 0);
+					count += buffer_controller(print_buffer, str, 0);
 					seq = 0;
 				}
 			}
@@ -47,12 +47,12 @@ int _printf(const char *formart, ...)
 				seq = 1;
 			else
 			{
-				buffer_controller(print_buffer, &formart[i], 1, 0);
+				buffer_controller(print_buffer, &formart[i], 0);
 				count++;
 			}
 		}
 	}
-	buffer_controller(print_buffer, "", 1, 1);
+	buffer_controller(print_buffer, "", 1);
 	va_end(args);
 	return (count);
 }

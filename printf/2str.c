@@ -161,30 +161,3 @@ char *UHEX2str(const unsigned int num)
 	}
 	return (str);
 }
-/**
- * addr2str - converts an address to an str
- * @num: The address to convert
- * Return: the address hex in a string
- */
-char *addr2str(const char *num)
-{
-	unsigned int len;
-	int temp, i;
-	char *str;
-	char hex[] = "0123456789abcdef";
-
-	str = malloc(12 + 3);
-	if (str == NULL)
-	{
-		return (str);
-	}
-	str[15] = '\0';
-	for (i = 0; i < (6); i++)
-	{
-		str[i * 2]          = hex[num[i + 1] / 16];
-		str[(i * 2) + 1]    = hex[num[i + 1] % 16];
-	}
-	str[0] = '0';
-	str[1] = 'x';
-	return (str);
-}
