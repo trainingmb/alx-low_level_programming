@@ -1,5 +1,6 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * addr2str - converts an address to an str
@@ -8,8 +9,7 @@
  */
 char *addr2str(const char *num)
 {
-	unsigned int len;
-	int temp, i;
+	int i;
 	char *str;
 	char hex[] = "0123456789abcdef";
 
