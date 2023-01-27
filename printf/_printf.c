@@ -46,7 +46,7 @@ int _printf(const char *formart, ...)
 				seq = formart[i] == 'c' ? va_arg(args, int) : '%';
 				count += buffer_controller(print_buffer, &seq, 'c');
 				seq = 0;
-				i = formart[i] == '%' ? i : i - 1;
+				i = (formart[i] == '%') || (formart[i] == 'c') ? i : i - 1;
 			}
 			if ((seq) && (str != ((void *) 0)))
 			{
