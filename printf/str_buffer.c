@@ -3,6 +3,37 @@
 #include <stdlib.h>
 
 /**
+ * ubin2str - converts an unsigned bin to an str
+ * @num: The unsigned bin to convert
+ * Return: the unsigned bin in a string
+ */
+char *ubin2str(const unsigned int num)
+{
+	unsigned int temp, len;
+	int i;
+	char *str;
+
+	temp = num;
+	for (len = 1; temp / 2; len++)
+	{
+		temp = temp / 2;
+	}
+	str = malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+	{
+		return (str);
+	}
+	str[len] = '\0';
+	temp = num;
+	for (i = len - 1; i >= 0 ; i--)
+	{
+		str[i] = (char) ((temp % 2) + '0');
+		temp /= 2;
+	}
+	return (str);
+}
+
+/**
  * addr2str - converts an address to an str
  * @num: The address to convert
  * Return: the address hex in a string

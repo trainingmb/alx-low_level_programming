@@ -20,12 +20,15 @@ char *specifier2str(const char *formart, va_list *args)
 		str = str2str(va_arg(*args, char *));
 	else if (formart[i] == 'u')
 		str = uint2str(va_arg(*args, unsigned int));
+	else if (formart[i] == 'b')
+		str = ubin2str(va_arg(*args, unsigned int));
 	else if (formart[i] == 'o')
 		str = uoct2str(va_arg(*args, unsigned int));
 	else if (formart[i] == 'x')
 		str = uhex2str(va_arg(*args, unsigned int));
 	else if (formart[i] == 'X')
 		str = UHEX2str(va_arg(*args, unsigned int));
+
 	return (str);
 }
 /**

@@ -39,6 +39,7 @@ unsigned int _strlen(const char *s);
 char *reversestr(const char *str);
 char *int2str(int num);
 char *uint2str(const unsigned int);
+char *ubin2str(const unsigned int);
 char *uoct2str(const unsigned int);
 char *uhex2str(const unsigned int);
 char *UHEX2str(const unsigned int);
