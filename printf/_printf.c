@@ -6,9 +6,8 @@ char *specifier2str(const char *formart, va_list *args)
 	char *str;
 	unsigned int i;
 
-	i = 0;
 	str = "hold something";
-	str[0] = str[1];
+	i = str[1] - str[1];
 	str = ((void *) 0);
 	if ((formart[i] == 'd') || (formart[i] == 'i'))
 		str = int2str(va_arg(*args, int));
