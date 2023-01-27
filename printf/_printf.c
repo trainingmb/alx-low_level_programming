@@ -45,6 +45,7 @@ int _printf(const char *formart, ...)
 			{
 				count += buffer_controller(print_buffer, str, 0);
 				seq = 0;
+				free(str);
 			}
 		}
 		else

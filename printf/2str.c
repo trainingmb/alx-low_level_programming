@@ -45,8 +45,8 @@ char *int2str(int num)
  */
 char *uint2str(const unsigned int num)
 {
-	unsigned int len;
-	int temp, i;
+	unsigned int temp, len;
+	int i;
 	char *str;
 
 	temp = num;
@@ -75,8 +75,8 @@ char *uint2str(const unsigned int num)
  */
 char *uoct2str(const unsigned int num)
 {
-	unsigned int len;
-	int temp, i;
+	unsigned int temp, len;
+	int i;
 	char *str;
 
 	temp = num;
@@ -105,8 +105,8 @@ char *uoct2str(const unsigned int num)
  */
 char *uhex2str(const unsigned int num)
 {
-	unsigned int len;
-	int temp, i;
+	unsigned int temp, len;
+	int i;
 	char *str;
 	char hex[] = "0123456789abcdef";
 
@@ -136,8 +136,8 @@ char *uhex2str(const unsigned int num)
  */
 char *UHEX2str(const unsigned int num)
 {
-	unsigned int len;
-	int temp, i;
+	unsigned int temp, len;
+	int i;
 	char *str;
 	char hex[] = "0123456789ABCDEF";
 
