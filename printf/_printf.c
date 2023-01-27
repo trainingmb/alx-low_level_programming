@@ -53,13 +53,3 @@ int _printf(const char *formart, ...)
 	va_end(args);
 	return (count);
 }
-
-/**
- * printf - PRINTF
- * @formart: the string formart
- * Return: the length of string written
- */
-int printf(const char *formart, ...)
-{
-	return (_printf(formart));
-}
