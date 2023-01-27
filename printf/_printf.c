@@ -1,6 +1,11 @@
 #include "main.h"
 
-
+/**
+ * specifier2str - PRINTF
+ * @formart: the string formart
+ * @args: va list to use
+ * Return: the length of string written
+ */
 char *specifier2str(const char *formart, va_list *args)
 {
 	char *str;
