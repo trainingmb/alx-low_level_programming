@@ -2,6 +2,7 @@
 #define MAIN_H_HEADER boing
 #define BUFFER_LEN 1024
 #include <stdarg.h>
+#include <stdlib.h>
 
 struct modifer{
 	char left_just;

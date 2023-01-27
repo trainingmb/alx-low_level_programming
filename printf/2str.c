@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 /**
  * int2str - converts an integer to an str
