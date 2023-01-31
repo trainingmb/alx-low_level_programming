@@ -8,9 +8,9 @@
 size_t print_list(const list_t *h)
 {
 	size_t s;
-	const list_t* iter;
-	iter = h;
+	const list_t *iter;
 
+	iter = h;
 	for (s = 0; iter != ((void *) 0); iter = iter->next)
 	{
 		s++;
@@ -42,19 +42,19 @@ size_t print_list(const list_t *h)
  */
 unsigned int _pow(unsigned int u, int n)
 {
-    unsigned int i;
+	unsigned int i;
 
-    if (n < 1)
-    {
-        return (1);
-    }
-    i = u;
-    while (n > 1)
-    {
-        n--;
-        i *= u;
-    }
-    return (i);
+	if (n < 1)
+	{
+		return (1);
+	}
+	i = u;
+	while (n > 1)
+	{
+		n--;
+		i *= u;
+	}
+	return (i);
 }
 
 /**
@@ -72,16 +72,16 @@ int _putuint(unsigned int u)
 	f = u;
 	n = 1;
 	while (f / 10)
-    {
-        f /= 10;
-        n++;
-    }
-    while (n > 0)
-    {
-        f = ((int) (u / _pow(10, n - 1))) % 10;
-        n--;
-        i = i && _putchar(f + '0');
-    }
+	{
+		f /= 10;
+		n++;
+	}
+	while (n > 0)
+	{
+		f = ((int) (u / _pow(10, n - 1))) % 10;
+		n--;
+		i = i && _putchar(f + '0');
+	}
 	return (i);
 }
 
@@ -91,14 +91,14 @@ int _putuint(unsigned int u)
  */
 void _putstr(char *str)
 {
-    if (str != ((void *)0))
-    {
-        while (*str != '\0')
-        {
-            _putchar(*str);
-            str++;
-        }
-    }
+	if (str != ((void *)0))
+	{
+		while (*str != '\0')
+		{
+			_putchar(*str);
+			str++;
+		}
+	}
 }
 
 /**
@@ -108,13 +108,13 @@ void _putstr(char *str)
  */
 void _putstrlen(char *str, unsigned int len)
 {
-    if (str != ((void *)0))
-    {
-        while (len > 0)
-        {
-            _putchar(*str);
-            str++;
-            len--;
-        }
-    }
+	if (str != ((void *)0))
+	{
+		while (len > 0)
+		{
+			_putchar(*str);
+			str++;
+			len--;
+		}
+	}
 }
