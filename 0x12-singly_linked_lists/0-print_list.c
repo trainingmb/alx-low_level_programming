@@ -2,8 +2,8 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t s, i;
-	list_t* iter;
+	size_t s;
+	const list_t* iter;
 	iter = h;
 
 	for (s = 0; iter != ((void *) 0); iter = iter->next)
