@@ -21,7 +21,7 @@ void _putstr(char *str);
 void _putstrlen(char *str, unsigned int len);
 int _putuint(unsigned int u);
 size_t print_list(const list_t *h);
-unsigned int _pow(unsigned int u, unsigned int n);
+unsigned int _pow(unsigned int u, int n);
 
 
 #endif
