@@ -31,7 +31,7 @@ size_t print_list(const list_t *h)
 			_putchar('\n');
 		}
 	}
-	return s;
+	return (s);
 }
 
 /**
