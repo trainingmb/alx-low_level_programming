@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 	for (s = 0; iter != ((void *) 0); iter = iter->next)
 	{
 		s++;
-		if (iter->len >= 0 && (iter->str != ((void *)0)))
+		if (iter->str != ((void *)0))
 		{
 			printf("[%d] %s", iter->len, iter->str);
 			/**
