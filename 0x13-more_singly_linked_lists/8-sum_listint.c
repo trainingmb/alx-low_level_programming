@@ -15,7 +15,7 @@ int sum_listint(listint_t *head)
 		return (0);
 	for (iter = head; iter != ((void *) 0); iter = iter->next)
 	{
-		sum == iter->n;
+		sum += iter->n;
 	}
 	return (sum);
 }
