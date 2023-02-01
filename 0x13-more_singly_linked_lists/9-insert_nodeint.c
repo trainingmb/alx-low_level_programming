@@ -35,11 +35,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			newnode->next = iter;
 			*head = newnode;
 		}
-		else
+		else if ((count + 1) != idx)
 		{
-			newnode->next = iter->next;
-			iter->next = newnode;
+			return ((void *) 0);
 		}
+		newnode->next = iter->next;
+		iter->next = newnode;
 	}
 	return (newnode);
 }
