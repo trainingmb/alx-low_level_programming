@@ -30,11 +30,11 @@ size_t print_listint_safe(const listint_t *h)
 		}
 		if (looped == 0)
 		{
-			printf("[%p] %i\n", iter, iter->n);
+			printf("[%p] %i\n", (void *) iter, iter->n);
 		}
 		else
 		{
-			printf("-> [%p] %i\n", iter, iter->n);
+			printf("-> [%p] %i\n", (void *) iter, iter->n);
 			exit(98);
 		}
 		iter = iter->next;
