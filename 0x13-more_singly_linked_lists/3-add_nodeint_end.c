@@ -25,7 +25,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	else
 	{
-		for (iter = (*head); iter->next != ((void *) 0); iter = iter->next);
+		for (iter = (*head); iter->next != ((void *) 0); );
+			iter = iter->next;
 		iter->next = newnode;
 	}
 	return (*head);
