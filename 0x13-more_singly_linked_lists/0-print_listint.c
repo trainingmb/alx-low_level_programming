@@ -13,13 +13,10 @@ size_t print_listint(const listint_t *h)
 	iter = h;
 	if (h == ((void *) 0))
 		return (0);
-	else
+	for (n = 0; iter != ((void *) 0); n++)
 	{
-		for (n = 0; iter != ((void *) 0); n++)
-		{
-			printf("%i\n", iter->n);
-			iter = iter->next;
-		}
+		printf("%i\n", iter->n);
+		iter = iter->next;
 	}
 	return (n);
 }
