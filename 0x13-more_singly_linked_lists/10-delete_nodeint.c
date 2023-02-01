@@ -16,31 +16,26 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (*head == ((void *) 0))
 		return (-1);
-	else
+
+	count = 0;
+	for (iter = (*head)
+		; iter->next != ((void *) 0) && ((count + 1) < index)
+		; iter = iter->next)
 	{
-		count = 0;
-		for (iter = (*head)
-			; iter->next != ((void *) 0) && ((count + 1) < index)
-			; iter = iter->next)
-		{
-			count++;
-		}
-		if (index == 0)
-		{
-			*head = iter->next;
-			free(iter);
-			return (1);
-		}
-		if (((count + 1) != index) || (iter->next == ((void *) 0)))
-		{
-			return (-1);
-		}
-		else
-		{
-			temp = iter->next;
-			iter->next = temp->next;
-			free(temp);
-			return (1);
-		}
+		count++;
 	}
+	if (index == 0)
+	{
+		*head = iter->next;
+		free(iter);
+		return (1);
+	}
+	if (((count + 1) != index) || (iter->next == ((void *) 0)))
+	{
+		return (-1);
+	}
+	temp = iter->next;
+	iter->next = temp->next;
+	free(temp);
+	return (1);
 }
