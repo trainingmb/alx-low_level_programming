@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Get list length
+ * add_nodeint - add a node to the start of a list
  * @head: the start node
  * @n: the int for the node
  * Return: The new head or null
