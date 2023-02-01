@@ -17,15 +17,15 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return ((void *) 0);
 	}
 	newnode->n = n;
-	if (h == ((void *) 0))
+	if (head == ((void *) 0))
 	{
 		newnode->next = ((void *) 0);
-		head = &newnode;
+		*head = &newnode;
 	}
 	else
 	{
 		newnode->next = (*head);
-		head = &newnode;
+		*head = &newnode;
 	}
 	return (newnode);
 }
