@@ -2,11 +2,10 @@
 
 /**
  * free_listint - Free the list
- * @h: the start node
+ * @head: the start node
  */
 void free_listint(listint_t *head)
 {
-	size_t n;
 	listint_t *iter;
 	listint_t *temp;
 
@@ -19,4 +18,3 @@ void free_listint(listint_t *head)
 		free(temp);
 	}
 }
-
