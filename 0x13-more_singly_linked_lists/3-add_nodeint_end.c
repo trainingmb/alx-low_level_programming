@@ -23,8 +23,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		*head = newnode;
 	else
 	{
-		for (iter = (*head); iter->next != ((void *) 0); iter = iter->next);
+		for (iter = (*head); iter->next != ((void *) 0); iter = iter->next)
+		{
 			iter = iter;
+		}
 
 		iter->next = newnode;
 	}
