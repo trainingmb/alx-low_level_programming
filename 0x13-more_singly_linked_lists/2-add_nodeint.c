@@ -2,7 +2,7 @@
 
 /**
  * add_nodeint - Get list length
- * @h: the start node
+ * @head: the start node
  * @n: the int for the node
  * Return: The new head or null
  */
