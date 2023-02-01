@@ -2,6 +2,7 @@
 
 /**
  * free_listint2 - Free the list
+ * The function sets the head to NULL
  * @head: pinter to the start node
  */
 void free_listint2(listint_t **head)
@@ -17,4 +18,5 @@ void free_listint2(listint_t **head)
 		iter = iter->next;
 		free(temp);
 	}
+	*head = ((void *) 0);
 }
