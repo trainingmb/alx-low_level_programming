@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - Add a node to the end of a list
+ * insert_nodeint_at_index - Add a node to a list at idx
  * @head: the start node
  * @idx: The position to place the node
  * @n: the int for the node
@@ -35,11 +35,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			newnode->next = iter;
 			*head = newnode;
 		}
+		else if ((count + 1) != idx)
+		{
+			return ((void *) 0);
+		}
 		else
 		{
 			newnode->next = iter->next;
 			iter->next = newnode;
 		}
 	}
-	return (*head);
+	return (newnode);
 }
