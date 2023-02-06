@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	char pr;
 
 	pr = 0;
-	i = 1 << 30;
+	i = 1 << 31;
 	while (i)
 	{
 		if (pr == 0)
