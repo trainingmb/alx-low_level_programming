@@ -1,6 +1,6 @@
 
 /**
- * binary_to_uint: turn a binary string to an integer
+ * binary_to_uint - turn a binary string to an integer
  * @b: the binary string
  * Return: Either the int equivalent or NULL if not valid
  */

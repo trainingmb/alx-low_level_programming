@@ -1,6 +1,6 @@
 
 /**
- * set_bit: Set the bit at index to 1
+ * set_bit - Set the bit at index to 1
  * @n: pointer to the number
  * @index: index of bit
  * Return: 1 fi successful else -1

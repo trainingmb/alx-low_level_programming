@@ -1,6 +1,6 @@
 
 /**
- * clear_bit: Clear the bit at index
+ * clear_bit - Clear the bit at index
  * @n: pointer to the number
  * @index: index of bit
  * Return: 1 fi successful else -1

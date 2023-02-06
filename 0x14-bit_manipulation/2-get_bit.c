@@ -1,6 +1,6 @@
 
 /**
- * get_bit: Get the bit at index
+ * get_bit - Get the bit at index
  * @n: pointer to the number
  * @index: index of bit
  * Return: 1 or 0 if successful else -1

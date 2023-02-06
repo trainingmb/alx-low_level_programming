@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_binary: print the binary number equivalent of n
+ * print_binary - print the binary number equivalent of n
  * @n: the number
  */
 void print_binary(unsigned long int n)

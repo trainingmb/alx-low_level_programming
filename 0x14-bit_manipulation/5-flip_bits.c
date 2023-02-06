@@ -1,6 +1,6 @@
 
 /**
- * flip_bits: how many bit flips to make n into m
+ * flip_bits - how many bit flips to make n into m
  * @n: the before number
  * @m: the after number
  * Return: count of bits to flip
