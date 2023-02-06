@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	i = 1 << 30;
 	while (i)
 	{
-		if(pr == 0)
+		if (pr == 0)
 		{
 			if ((n & i))
 			{
@@ -32,7 +32,7 @@ void print_binary(unsigned long int n)
 			i = i >> 1;
 		}
 	}
-	if(pr == 0)
+	if (pr == 0)
 	{
 		_putchar('0');
 	}
