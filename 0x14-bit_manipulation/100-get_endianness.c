@@ -4,7 +4,11 @@
  */
 int check_for_endianness()
 {
-  unsigned int x = 1;
-  char *c = (char*) &x;
-  return (int)*c;
+	unsigned int x;
+	char *c;
+
+	x = 1;
+	c = (char*) &x;
+	return (int)*c;
 }
+
