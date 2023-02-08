@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _error - Handle error in filehandlling
  * @e: code
