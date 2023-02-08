@@ -12,11 +12,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	count = 0;
 	do {
-	  c = fgetc(fp);
-	  if (feof(fp))
-	    	break;
-	  _putchar(c);
-	  count++;
+		c = fgetc(fp);
+		if (feof(fp))
+			break;
+		_putchar(c);
+		count++;
 	}while (count < letters);
 	ct = count;
 	fclose(fp);
