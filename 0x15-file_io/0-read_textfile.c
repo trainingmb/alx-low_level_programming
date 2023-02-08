@@ -12,6 +12,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t count;
 	ssize_t ct;
 
+	if (filename == NULL)
+		return (0);
 	fp = fopen(filename, "r");
 	if (fp == NULL)
 		return (0);
@@ -28,4 +30,3 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fclose(fp);
 	return (ct);
 }
-
