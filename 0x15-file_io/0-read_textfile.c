@@ -8,20 +8,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t ct;
 
 	fp = fopen(filename, "r");
-	if(fp == NULL)
-	  return (0);
+	if (fp == NULL)
+		return (0);
 	count = 0;
-	do
-	{
+	do {
 	  c = fgetc(fp);
-	  if( feof(fp) )
-	     break ;
+	  if (feof(fp))
+	    	break;
 	  _putchar(c);
 	  count++;
-	} 
-	while(count < letters);
+	}while (count < letters);
 	ct = count;
-
 	fclose(fp);
 	return (ct);
 }
