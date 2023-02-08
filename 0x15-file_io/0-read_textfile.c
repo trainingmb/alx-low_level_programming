@@ -17,7 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			break;
 		_putchar(c);
 		count++;
-	}while (count < letters);
+	} while (count < letters);
 	ct = count;
 	fclose(fp);
 	return (ct);
