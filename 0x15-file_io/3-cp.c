@@ -76,6 +76,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	cp(argv[1], avrg[2]);
+	cp(argv[1], arvg[2]);
 	return (0);
 }
