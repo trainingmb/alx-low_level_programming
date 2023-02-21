@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 {
 	char status;
 
-	status = 'c';
+	status = status + 'c';
 	argc = argc - 1 + 1;
 	_puts(argv[0]);
 	while(1)
