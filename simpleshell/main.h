@@ -7,5 +7,6 @@
 
 int _putchar(char c);
 void puts(char *str);
+char *read_textfile(const char *filenames);
 
 #endif

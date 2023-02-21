@@ -9,7 +9,13 @@ int main(int argc, char **argv)
 {
     char status;
 
-    puts("#cisfun$ ");
+    while(1)
+    {
+        puts("#cisfun$>");
+        line = read_textfile(NULL);
+        puts(line);
+        puts("\n");
+    }
 
     return EXIT_SUCCESS;
 }
