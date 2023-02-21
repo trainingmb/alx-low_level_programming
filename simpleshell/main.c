@@ -9,12 +9,14 @@ int main(int argc, char **argv)
 {
     char status;
 
+    argc = argc - 1 + 1;
+    _puts(argv[0]);
     while(1)
     {
-        puts("#cisfun$>");
+        _puts("#cisfun$>");
         line = read_textfile(NULL);
-        puts(line);
-        puts("\n");
+        _puts(line);
+        _puts("\n");
     }
 
     return EXIT_SUCCESS;
