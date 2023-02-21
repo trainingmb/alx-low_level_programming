@@ -7,7 +7,7 @@
  */
 int execute(char **ll)
 {
-    pid_t childpid, waitpid;
+    pid_t childpid, wtpid;
     int status;
 
     childpid = fork();
@@ -27,7 +27,7 @@ int execute(char **ll)
     else
     {
         do
-            waitpid = waitpid(childpid, &status, WUNTRACED);
+            wtpid = waitpid(childpid, &status, WUNTRACED);
         while (!WIFEXITED(status) && !WIFSIGNALED(status));
     }
 }
