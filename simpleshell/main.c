@@ -9,7 +9,6 @@ int main(int argc, char **argv)
 {
 	char status;
 	char *line;
-	size_t bufsize;
 
 	status = 'c';
 	status = status + 'c';
@@ -20,8 +19,6 @@ int main(int argc, char **argv)
 		_puts("#cisfun$>");
 		line = read_textfile(NULL);
 		execute(&line);
-		getline(&line, &bufsize, stdin);
-		_puts(line);
 	}
 
 	return (EXIT_SUCCESS);
