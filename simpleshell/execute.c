@@ -30,4 +30,5 @@ int execute(char **ll)
             waitpid(childpid, &status, WUNTRACED);
         while (!WIFEXITED(status) && !WIFSIGNALED(status));
     }
+    return (1);
 }
