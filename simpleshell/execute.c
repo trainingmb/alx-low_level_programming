@@ -7,28 +7,27 @@
  */
 int execute(char **ll)
 {
-    pid_t childpid;
-    int status;
+	pid_t childpid;
+	int status;
 
-    childpid = fork();
-    if (childpid == 0)
-    {
-        if (execve(ll[0], ll, NULL) == -1)
-        {
-            perror(ll[0]);
-            perror(": No such file or directory");
-        }
-        exit(EXIT_FAILURE);
-    }
-    else if (childpid < 0)
-    {
-        perror("Fork");
-    }
-    else
-    {
-        do
-            waitpid(childpid, &status, WUNTRACED);
-        while (!WIFEXITED(status) && !WIFSIGNALED(status));
-    }
-    return (1);
+	childpid = fork();
+	if (childpid == 0)
+	{
+		if (execve(ll[0], ll, NULL) == -1)
+		{
+			perror(ll[0]);
+		}
+		exit(EXIT_FAILURE);
+	}
+	else if (childpid < 0)
+	{
+		perror("Fork");
+	}
+	else
+	{
+		do
+			waitpid(childpid, &status, WUNTRACED);
+		while (!WIFEXITED(status) && !WIFSIGNALED(status));
+	}
+	return (1);
 }
