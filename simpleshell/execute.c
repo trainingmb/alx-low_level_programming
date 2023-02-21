@@ -13,9 +13,9 @@ int execute(char **ll)
     childpid = fork();
     if (childpid == 0)
     {
-        if (execvp(ll[0], ll, NULL) == -1)
+        if (execve(ll[0], ll, NULL) == -1)
         {
-            perror(ll[0])
+            perror(ll[0]);
             perror(": No such file or directory");
         }
         exit(EXIT_FAILURE);
