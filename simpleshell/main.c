@@ -7,17 +7,18 @@
  */
 int main(int argc, char **argv)
 {
-    char status;
+	char status;
 
-    argc = argc - 1 + 1;
-    _puts(argv[0]);
-    while(1)
-    {
-        _puts("#cisfun$>");
-        line = read_textfile(NULL);
-        _puts(line);
-        _puts("\n");
-    }
+	status = 'c';
+	argc = argc - 1 + 1;
+	_puts(argv[0]);
+	while(1)
+	{
+		_puts("#cisfun$>");
+		line = read_textfile(NULL);
+		_puts(line);
+		_puts("\n");
+	}
 
-    return EXIT_SUCCESS;
-}
+	return EXIT_SUCCESS;
+	}
