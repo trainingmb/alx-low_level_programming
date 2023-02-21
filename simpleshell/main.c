@@ -8,6 +8,7 @@
 int main(int argc, char **argv)
 {
 	char status;
+	char *line;
 
 	status = status + 'c';
 	argc = argc - 1 + 1;
