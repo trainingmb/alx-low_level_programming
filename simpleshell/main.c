@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 	char status;
 	char *line;
 
+	status = 'c';
 	status = status + 'c';
 	argc = argc - 1 + 1;
 	_puts(argv[0]);
