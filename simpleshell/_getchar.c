@@ -5,11 +5,11 @@
  * @filename: The name of the file to read from
  * Return: the extracted string
  */
-char *read_textfile(const char *filenames)
+char *read_textfile(const char *filename)
 {
 	char *line;
 	FILE *fp;
-	ssize_t bufsize;
+	size_t bufsize;
 
 	line = NULL;
 	bufsize = 0;
@@ -18,7 +18,7 @@ char *read_textfile(const char *filenames)
 	else
 	{
 		fp = fopen(filename, "r");
-		if (fp == -1)
+		if (fp == NULL)
 		{
 			perror("fopen");
 			exit(EXIT_FAILURE);
