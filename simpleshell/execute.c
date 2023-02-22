@@ -17,10 +17,7 @@ int execute(char **ll)
 		if (execvp(ll[0], ll) == -1)
 		{
 			len = _strlen(ll[0]);
-			_puts(ll[0]);
-			_puts(ll[0]);
-			_puts(ll[0]);
-			ll[0][len-1] = '\0';
+			ll[0][len - 1] = '\0';
 			perror(ll[0]);
 		}
 		exit(EXIT_FAILURE);

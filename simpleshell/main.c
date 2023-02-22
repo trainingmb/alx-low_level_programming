@@ -1,11 +1,9 @@
 #include "main.h"
 /**
  * main - main
- * @argc: Argument count
- * @argv: Argument list
  * Return: Return successful
  */
-int main()
+int main(void)
 {
 	char status;
 	char *line;

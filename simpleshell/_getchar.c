@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * read_filestream - read from a text file or file
+ * read_textfile - read from a text file or file
  * @filename: The name of the file to read from
  * Return: the extracted string
  */
