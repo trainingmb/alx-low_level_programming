@@ -2,7 +2,8 @@
 
 /**
  * execute - Execute a list of commands
- * @ll: List of strings
+ * @argv: List of arguments
+ * @env: Env list;
  * Return: 1 if success
  */
 int execute(char **argv, char **env)
