@@ -18,7 +18,7 @@ int main(void)
 		line = read_textfile(NULL);
 		tokens = tokennize_line(line);
 		execute(tokens, env);
-		checkmalloc(argv, -2);
+		checkmalloc(tokens, -2);
 	}
 
 	return (EXIT_SUCCESS);
