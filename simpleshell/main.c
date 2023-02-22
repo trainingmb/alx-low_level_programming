@@ -7,6 +7,7 @@ int main(void)
 {
 	char status;
 	char *line;
+	char *env[] = {NULL};
 
 	status = 'c';
 	status = status + 'c';
@@ -14,7 +15,7 @@ int main(void)
 	{
 		_puts("#cisfun$>");
 		line = read_textfile(NULL);
-		execute(&line);
+		execute(&line, env);
 	}
 
 	return (EXIT_SUCCESS);
