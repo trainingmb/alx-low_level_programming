@@ -5,14 +5,13 @@
  * @argv: Argument list
  * Return: Return successful
  */
-int main(int argc, char **argv)
+int main()
 {
 	char status;
 	char *line;
 
 	status = 'c';
 	status = status + 'c';
-	argc = argc - 1 + 1;
 	while (1)
 	{
 		_puts("#cisfun$>");
