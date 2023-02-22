@@ -14,7 +14,7 @@ int execute(char **ll)
 	childpid = fork();
 	if (childpid == 0)
 	{
-		if (execvp(ll[0], ll) == -1)
+		if (execve(ll[0], ll) == -1)
 		{
 			len = _strlen(ll[0]);
 			ll[0][len-1] = '\0';
