@@ -22,6 +22,7 @@ int execute(char **argv, char **env)
 			argv[0][len - 1] = '\0';
 			perror(argv[0]);
 		}
+		_puts(argv[0]);
 		checkmalloc(argv, -2);
 		exit(EXIT_FAILURE);
 	}
