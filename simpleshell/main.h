@@ -10,5 +10,6 @@ int _putchar(char c);
 void _puts(char *str);
 char *read_textfile(const char *filenames);
 int execute(char **ll);
+int _strlen(char *s);
 
 #endif
