@@ -19,7 +19,6 @@ int execute(char **argv, char **env)
 			_puts(argv[0]);
 			perror(argv[0]);
 		}
-		_puts(argv[0]);
 		checkmalloc(argv, -2);
 		exit(EXIT_FAILURE);
 	}
@@ -133,6 +132,8 @@ char *genstring(char *str, int startpos, int len)
 	for (i = 0; i < len; ++i)
 	{
 		substr[i] = str[i + startpos];
+		if (substr[i] == '\n')
+			substr[i]= ' ';
 	}
 	substr[len] = '\0';
 	return (substr);
