@@ -10,7 +10,6 @@ int execute(char **argv, char **env)
 {
 	pid_t childpid;
 	int status;
-	int len;
 
 	childpid = fork();
 	if (childpid == 0)
