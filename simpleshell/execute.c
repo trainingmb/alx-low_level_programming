@@ -5,7 +5,7 @@
  * @ll: List of strings
  * Return: 1 if success
  */
-int execute(char **ll)
+int execute(char **argv, char **env)
 {
 	pid_t childpid;
 	int status;
@@ -14,11 +14,11 @@ int execute(char **ll)
 	childpid = fork();
 	if (childpid == 0)
 	{
-		if (execvp(ll[0], ll) == -1)
+		if (execve("/bin/ls", argv, env) == -1)
 		{
-			len = _strlen(ll[0]);
-			ll[0][len - 1] = '\0';
-			perror(ll[0]);
+			len = _strlen(argv[0]);
+			argv[0][len - 1] = '\0';
+			perror(argv[0]);
 		}
 		exit(EXIT_FAILURE);
 	}
