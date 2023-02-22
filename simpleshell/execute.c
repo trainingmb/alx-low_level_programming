@@ -147,7 +147,15 @@ void checkmalloc(char **created, int pos)
 		exit(EXIT_FAILURE);
 	if (pos != -1)
 	{
-		if (created[pos] == NULL || pos == -2)
+		if (pos == -2)
+		{
+			for (i = 0; created[i] != NULL; i++)
+			{
+				free(created[i]);
+			}
+			free(created);
+		}
+		else if (created[pos] == NULL)
 		{
 			for (i = 0; created[i] != NULL; i++)
 			{
@@ -156,5 +164,6 @@ void checkmalloc(char **created, int pos)
 			free(created);
 			exit(EXIT_FAILURE);
 		}
+
 	}
 }
