@@ -93,7 +93,7 @@ char **tokennize_line(char *line)
 			if (line[i] == ' ')
 			{
 				ws = 1;
-				tokens[count] = genstring(line, i - subslen, subslen)
+				tokens[count] = genstring(line, i - subslen, subslen);
 				checkmalloc(tokens, count);
 				count++;
 			}

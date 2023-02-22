@@ -16,7 +16,7 @@ int main(void)
 	{
 		_puts("#cisfun$>");
 		line = read_textfile(NULL);
-		tokens = tokennize(line);
+		tokens = tokennize_line(line);
 		execute(tokens, env);
 	}
 
