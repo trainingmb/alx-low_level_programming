@@ -17,6 +17,7 @@ int main(void)
 		_puts("#cisfun$>");
 		line = read_textfile(NULL);
 		tokens = tokennize_line(line);
+		_puts(tokens[0]);
 		execute(tokens, env);
 		checkmalloc(tokens, -2);
 	}
