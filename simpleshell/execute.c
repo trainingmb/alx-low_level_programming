@@ -14,7 +14,7 @@ int execute(char **argv, char **env)
 	childpid = fork();
 	if (childpid == 0)
 	{
-		if (execve("/bin/ls", argv, env) == -1)
+		if (execve(argv[0], argv, env) == -1)
 		{
 			_puts(argv[0]);
 			perror(argv[0]);
