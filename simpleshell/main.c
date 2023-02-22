@@ -7,6 +7,7 @@ int main(void)
 {
 	char status;
 	char *line;
+	char **tokens;
 	char *env[] = {NULL};
 
 	status = 'c';
@@ -15,7 +16,8 @@ int main(void)
 	{
 		_puts("#cisfun$>");
 		line = read_textfile(NULL);
-		execute(&line, env);
+		tokens = tokennize(line);
+		execute(tokens, env);
 	}
 
 	return (EXIT_SUCCESS);
