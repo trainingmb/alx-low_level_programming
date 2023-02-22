@@ -18,8 +18,6 @@ int execute(char **argv, char **env)
 		if (execve("/bin/ls", argv, env) == -1)
 		{
 			_puts(argv[0]);
-			len = _strlen(argv[0]);
-			argv[0][len - 1] = '\0';
 			perror(argv[0]);
 		}
 		_puts(argv[0]);
