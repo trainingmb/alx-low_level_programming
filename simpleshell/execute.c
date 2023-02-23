@@ -6,7 +6,7 @@
  * @env: Env list;
  * Return: 1 if success
  */
-int execute(char **argv, char **env)
+int execute(char *argv[], char *env[])
 {
 	pid_t childpid;
 	int status;
