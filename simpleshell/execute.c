@@ -133,7 +133,7 @@ char *genstring(char *str, int startpos, int len)
 	{
 		substr[i] = str[i + startpos];
 		if (substr[i] == '\n')
-			substr[i]= ' ';
+			substr[i] = ' ';
 	}
 	substr[len] = '\0';
 	return (substr);
