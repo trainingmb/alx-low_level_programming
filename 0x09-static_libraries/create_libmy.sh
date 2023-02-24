@@ -1,3 +1,4 @@
 #!/bin/bash
 gcc -c -Wall $(echo $(ls *.c))
-ar rc liball.a *.o
+ar rc libmy.a *.o
+rm *.o
