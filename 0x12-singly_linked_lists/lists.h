@@ -1,6 +1,7 @@
 #ifndef MAIN_H_HEADER
 #define MAIN_H_HEADER boing
 #include <stddef.h>
+#include <stdlib.h>
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
