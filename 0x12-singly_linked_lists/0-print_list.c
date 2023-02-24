@@ -18,13 +18,6 @@ size_t print_list(const list_t *h)
 		if (iter->str != ((void *)0))
 		{
 			printf("[%d] %s", iter->len, iter->str);
-			/**
-			_putchar('[');
-			_putuint(iter->len);
-			_putchar(']');
-			_putchar(' ');
-			_putstrlen(iter->str, iter->len);
-			*/
 		}
 		else
 		{
