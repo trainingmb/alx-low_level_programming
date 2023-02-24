@@ -24,6 +24,6 @@ int _putuint(unsigned int u);
 size_t print_list(const list_t *h);
 unsigned int _pow(unsigned int u, int n);
 size_t list_len(const list_t *h);
-
+list_t *add_node(list_t **head, const char *str);
 
 #endif
