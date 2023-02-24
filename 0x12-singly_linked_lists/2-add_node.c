@@ -51,12 +51,10 @@ list_t *create_node(const char *str, list_t * next)
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	size_t s, len;
 	list_t *iter;
 
 	if (str == NULL || head == NULL)
 		return (NULL);
-	len = _strlen(str);
 	iter = create_node(str, (*head));
 	return (iter);
 }
