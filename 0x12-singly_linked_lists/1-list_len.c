@@ -7,13 +7,13 @@
  */
 size_t list_len(const list_t *h)
 {
-    size_t s;
-    const list_t *iter;
+	size_t s;
+	const list_t *iter;
 
-    iter = h;
-    for (s = 0; iter != ((void *) 0); iter = iter->next)
-    {
-        s++;
-    }
-    return (s);
+	iter = h;
+	for (s = 0; iter != ((void *) 0); iter = iter->next)
+	{
+		s++;
+	}
+	return (s);
 }
