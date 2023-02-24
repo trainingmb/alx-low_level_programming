@@ -30,10 +30,7 @@ size_t print_list(const list_t *h)
 		{
 			printf("[0] (nil)");
 		}
-		if (iter->next != ((void *) 0))
-		{
-			printf("\n");
-		}
+		printf("\n");
 	}
 	return (s);
 }
