@@ -9,7 +9,8 @@ size_t _strlen(const char *s)
 {
 	size_t len;
 
-	for (len = 0; s[len]; len++);
+	for (len = 0; s[len]; len++)
+		;
 	return (len);
 }
 
@@ -19,7 +20,7 @@ size_t _strlen(const char *s)
  * @next: The next node in the list
  * Return: new list node
  */
-list_t *create_node(const char *str, list_t * next)
+list_t *create_node(const char *str, list_t *next)
 {
 	list_t *newnode;
 	size_t s, len;
@@ -44,7 +45,7 @@ list_t *create_node(const char *str, list_t * next)
 }
 
 /**
- * add_node - Add a node to the list at the 
+ * add_node - Add a node to the list at the
  * @head: the head of the list
  * @str: String to add to list
  * Return: new list
