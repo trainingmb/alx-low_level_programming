@@ -57,5 +57,6 @@ list_t *add_node(list_t **head, const char *str)
 	if (str == NULL || head == NULL)
 		return (NULL);
 	iter = create_node(str, (*head));
+	*head = iter;
 	return (iter);
 }
