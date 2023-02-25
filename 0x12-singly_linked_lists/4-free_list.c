@@ -8,7 +8,7 @@ void free_list(list_t *head)
 {
 	list_t *iter;
 
-	while(head)
+	while (head)
 	{
 		iter = head;
 		free(iter->str);
