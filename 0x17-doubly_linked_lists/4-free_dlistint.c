@@ -6,8 +6,8 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-	listint_t *iter;
-	listint_t *temp;
+	dlistint_t *iter;
+	dlistint_t *temp;
 
 	if (head == ((void *) 0))
 		return;
