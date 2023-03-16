@@ -7,7 +7,8 @@
  * @n: the int for the node
  * Return: The new head or null
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
+	unsigned int idx, int n)
 {
 	dlistint_t *newnode;
 	dlistint_t *iter;
@@ -15,9 +16,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 
 	newnode = malloc(sizeof(dlistint_t));
 	if (newnode == NULL)
-	{
 		return ((void *) 0);
-	}
 	newnode->n = n;
 	newnode->next = ((void *) 0);
 	if (*head == ((void *) 0))
@@ -41,9 +40,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 			*head = newnode;
 		}
 		else if ((count + 1) != idx)
-		{
 			return ((void *) 0);
-		}
 		else
 		{
 			newnode->next = iter->next;
