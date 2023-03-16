@@ -2,7 +2,7 @@
 
 /**
  * print_dlistint - Print a doubleylinkedlist
- * h@: the start node
+ * @h: the start node
  * Return: The length of the list
  */
 size_t print_dlistint(const dlistint_t *h)
