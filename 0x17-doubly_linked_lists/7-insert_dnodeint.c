@@ -35,13 +35,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		if (idx == 0)
 		{
 			newnode->next = iter;
-			newnode->prev = iter->prev;
+			newnode->prev = ((void *) 0);
 			iter->prev = newnode;
 			*head = newnode;
 		}
 		else if ((count + 1) != idx)
 			return ((void *) 0);
 		newnode->next = iter->next;
+		if (iter->next != ((void *) 0))
+			iter->next->prev = newnode;
 		iter->next = newnode;
 		newnode->prev = iter;
 	}
