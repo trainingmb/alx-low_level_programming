@@ -41,12 +41,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		}
 		else if ((count + 1) != idx)
 			return ((void *) 0);
-		else
-		{
-			newnode->next = iter->next;
-			iter->next = newnode;
-			newnode->prev = iter;
-		}
+		newnode->next = iter->next;
+		iter->next = newnode;
+		newnode->prev = iter;
 	}
 	return (newnode);
 }
