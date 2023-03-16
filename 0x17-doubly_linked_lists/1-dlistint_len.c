@@ -8,7 +8,7 @@
 size_t dlistint_len(const dlistint_t *h)
 {
 	size_t n;
-	const listint_t *iter;
+	const dlistint_t *iter;
 
 	iter = h;
 	if (h == ((void *) 0))
