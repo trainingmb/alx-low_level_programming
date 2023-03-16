@@ -19,7 +19,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	newnode->prev = ((void *) 0);
 	if ((*head) == ((void *) 0))
 	{
-		newnode->next = ((void *) 0); 
+		newnode->next = ((void *) 0);
 		*head = newnode;
 	}
 	else
