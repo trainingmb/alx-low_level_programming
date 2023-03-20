@@ -1,29 +1,5 @@
 #include <stdio.h>
-
-/**
- * in - that gets the length of a prefix substring
- * @c: the pointer for the string
- * @a: the pointer to substring
- *
- * Return: If c in a
- */
-char in(char *c, char *a)
-{
-	unsigned int i;
-
-	i = 0;
-	while (a[i] != '\0')
-	{
-		if (c[i] != a[i])
-		{
-			return (0);
-		}
-		i++;
-	}
-
-	return (1);
-}
-
+#include "main.h"
 
 /**
  * _strstr - locates the first occurrence in
