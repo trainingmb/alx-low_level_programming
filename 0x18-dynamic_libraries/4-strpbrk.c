@@ -1,29 +1,5 @@
 #include <stdio.h>
 
-/**
- * in - that gets the length of a prefix substring
- * @c: the pointer for the string
- * @accept: the pointer containing the bytes
- *
- * Return: If c in accept
- */
-char in(char c, char *accept)
-{
-	unsigned int i;
-
-	i = 0;
-	while (accept[i] != '\0')
-	{
-		if (c == accept[i])
-		{
-			return (1);
-		}
-		i++;
-	}
-
-	return (0);
-}
-
 
 /**
  * _strpbrk - locates the first occurrence in
