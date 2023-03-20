@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * in - that gets the length of a prefix substring
  * @c: the pointer for the string
