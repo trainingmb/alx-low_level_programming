@@ -12,10 +12,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	newtable->array = malloc(size * sizeof(hash_node_t *));
 	if (newtable->array == ((void *) 0))
-	{
-		free(newtable);
 		return ((void *) 0);
-	}
 	if (size > 0)
 	{
 		newtable->array[0] = ((void *) 0);
