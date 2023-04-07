@@ -18,6 +18,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return ((void *) 0);
 	}
 	for(i = 0; i< size; i++)
-		newtable[i] = NULL;
+		newtable->array[i] = ((void *) 0);
 	return (newtable);
 }
