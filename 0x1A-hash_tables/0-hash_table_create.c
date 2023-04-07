@@ -20,6 +20,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 			newtable->array[size] = ((void *) 0);
 	}
 
-
 	return (newtable);
 }
