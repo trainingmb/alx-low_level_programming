@@ -35,8 +35,8 @@ int hash_table_set(hash_table_t *ht, const char *key,
 	if ((key == NULL) || (str_len(key) > 0))
 		return (0);
 	indx = key_index((const unsigned char *)key, ht->size);
-	if ((ht->array[index] != NULL) &&
-		(strcmp(ht->array[index]->key, key)) == 0)
+	if ((ht->array[indx] != NULL) &&
+		(strcmp(ht->array[indx]->key, key)) == 0)
 	{
 		ht->array[indx]->value = strdup(value);
 		return (1);
