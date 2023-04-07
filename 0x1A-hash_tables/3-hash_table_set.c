@@ -1,19 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * str_len: Length of string
- * @key: pointer to str
- *
- * Return: Length of string
+ * Short Description
  */
-unsigned long int str_len(const char *key)
-{
-	unsigned long int len = 0;
 
-	while (key[len] != '\0')
-		len++;
-	return (len);
-}
 
 /**
  * hash_table_set - function that adds an element to the hash table
