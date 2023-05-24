@@ -40,4 +40,3 @@ def island_perimeter(grid):
             if grid[i][j] == 1:
                 perimeter += beaches(grid, i, j, m, n)
     return perimeter
-
