@@ -23,13 +23,29 @@ def beaches(grid, i, j, m, n):
     return beaches
 
 
+def eg(grid, i, j, m, n):
+    """
+    Defines how many edges a cell at (i, j)
+    has at in an [m, n] grid in the upwards
+    and backwards direction
+    (i, j) is assumed to be land
+    """
+    beaches = 0
+    if ((i-1) >= 0) and (grid[i-1][j] == 1):
+        beaches += 1
+    if ((j-1) >= 0) and (grid[i][j-1] == 1):
+        beaches += 1
+    return beaches
+
+
 def island_perimeter(grid):
     """
     This function calculates the length of the
     cast line of a rectangular grid of m rows and
     n columns
     """
-    perimeter = 0
+    size = 0
+    edges = 0
     m = len(grid)
     if m == 0:
         return 0
@@ -38,5 +54,6 @@ def island_perimeter(grid):
     for i in range(0, m):
         for j in range(0, n):
             if grid[i][j] == 1:
-                perimeter += beaches(grid, i, j, m, n)
-    return perimeter
+                size += 1
+                edges += eg(grid, i, j, m, n)
+    return (size * 4) - (edges * 2)
