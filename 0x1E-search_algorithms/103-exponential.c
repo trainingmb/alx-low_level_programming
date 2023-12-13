@@ -17,13 +17,13 @@ void _print_array(int *array, size_t size)
 }
 
 /**
- * internal_binary_search - Search an ordered list in binary
+ * in_binary_search - Search an ordered list in binary
  * @array: Pointer to the array to be searched
  * @size: The size of the array to be searched
  * @value: The value for which the array is searching
  * Return: The index where the value was found or -1
  */
-int internal_binary_search(int *array, size_t size, int value)
+int in_binary_search(int *array, size_t size, int value)
 {
 	size_t m = (size - 1) / 2;
 	int result = 0;
@@ -34,13 +34,13 @@ int internal_binary_search(int *array, size_t size, int value)
 	_print_array(array, size);
 	if (array[m] < value)
 	{
-		result = (binary_search(&(array[m + 1]), size - m - 1, value));
+		result = (in_binary_search(&(array[m + 1]), size - m - 1, value));
 		if (result == -1)
 			return (-1);
 		return (m + 1 + result);
 	}
 	if (array[m] > value)
-		return (binary_search(array, m, value));
+		return (in_binary_search(array, m, value));
 	if (array[m] == value)
 		return (m);
 	return (-1);
@@ -55,7 +55,8 @@ int internal_binary_search(int *array, size_t size, int value)
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t i = 0, right, index;
+	size_t i = 0, right;
+	int index;
 
 	if (array == NULL || size == 0)
 		return (-1);
@@ -69,7 +70,7 @@ int exponential_search(int *array, size_t size, int value)
 	i = i / 2;
 	printf("Value found between indexes [%ld] and [%ld]\n", i, right);
 
-	index = (internal_binary_search(&(array[i]), right - i + 1, value));
+	index = (in_binary_search(&(array[i]), right - i + 1, value));
 	if (index == -1)
 		return (-1);
 	return (index + i);
