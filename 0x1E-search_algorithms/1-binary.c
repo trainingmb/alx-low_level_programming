@@ -8,7 +8,9 @@
  */
 void print_array(int *array, size_t size)
 {
-	for (size_t i = 0; i < size; i++)
+	size_t i = 0;
+
+	for (; i < size; i++)
 	{
 		printf("%d%s", array[i], i != (size - 1) ? ", " : "\n");
 	}
@@ -24,24 +26,23 @@ void print_array(int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int result = 0, middle = size / 2;
+	size_t m = (size - 1) / 2;
+	int result = 0;
 
-	if (array == NULL || size < 1)
+	if (array == NULL || size == 0)
 		return (-1);
 	printf("Searching in array: ");
 	print_array(array, size);
-	if (size < 2)
+	if (array[m] < value)
 	{
-		if (array[0] == value)
-			return (0);
-		else
+		result = (binary_search(&(array[m + 1]), size - m - 1, value));
+		if (result == -1)
 			return (-1);
+		return (m + 1 + result);
 	}
-	if (array[middle] > value)
-		return (binary_search(array, middle, value));
-	result = binary_search(&(array[middle]), size - middle, value);
-	if (result == -1)
-		return (-1);
-	return (result + middle);
+	if (array[m] > value)
+		return (binary_search(array, m, value));
+	if (array[m] == value)
+		return (m);
+	return (-1);
 }
-
